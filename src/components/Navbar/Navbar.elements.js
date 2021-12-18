@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from '../../globalStyles';
 
@@ -12,12 +11,12 @@ export const Nav = styled.nav`
   align-items: center;
   height: 95vh;
   width: 15vw;
+  font-size: 0.9rem;
 
   @media screen and (max-width: 768px) {
     width : 100%;
     height: 80px;
     justify-content: center;
-    font-size: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -40,11 +39,11 @@ export const NavbarContainer = styled(Container)`
 ${Container}
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled.a`
   color: #fff;
   cursor: pointer;
   text-decoration: none;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   width: 50px;
   height: 50px;
 
@@ -101,7 +100,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -114,7 +113,7 @@ export const NavLink = styled(Link)`
   position: relative;
 
   &:after {
-    background: none repeat scroll 0 0 transparent;
+    background: repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
     display: block;
@@ -149,14 +148,14 @@ export const SocialSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 110px;
 
   @media screen and (max-width: 768px) {
     height: 30px;
-    width: 80px;
+    width: 100px;
     position: absolute;
     top: 25px;
-    left: calc(50vw - 40px);
+    left: calc(50vw - 50px);
     flex-direction: row;
   }
 `;
@@ -178,6 +177,4 @@ export const SocialLink = styled.a`
     width: 100%;
     height: 100%;
   }
-
-  
 `;

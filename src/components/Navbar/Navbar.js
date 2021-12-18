@@ -33,16 +33,16 @@ const Navbar = () => {
           </MenuIcon>
           <NavMenu onClick={handleClick} open={open}>
             <NavItem>
-              <NavLink to='/'>Accueil</NavLink>
+              <NavLink href="#accueil">Accueil</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='/profil'>Profil</NavLink>
+              <NavLink href="#profil">Profil</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='/projets'>Projets</NavLink>
+              <NavLink href="#projets">Projets</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='/contact'>Contact</NavLink>
+              <NavLink href="#contact">Contact</NavLink>
             </NavItem>
           </NavMenu>
           <SocialSection>

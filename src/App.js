@@ -1,13 +1,23 @@
 import GlobalStyle from './globalStyles';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Navbar } from './components'
+import { Navbar } from './components';
+import Sections from './components/pages/Sections';
+import Home from './components/pages/Home/Home';
+import About from './components/pages/About/About';
+import Projects from './components/pages/Projects/Projects';
+import Contact from './components/pages/Contact/Contact';
 
 function App() {
   return (
-    <Router>
+    <>
       <GlobalStyle />
       <Navbar />
-    </Router>
+      <Sections>
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </Sections>
+    </>
   );
 }
 

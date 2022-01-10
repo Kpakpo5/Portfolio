@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaBars, FaTimes, FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import logo from '../../assets/logo.png';
+
 import { 
   Nav,
   NavbarContainer,
@@ -25,7 +26,7 @@ const Navbar = () => {
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>
+          <NavLogo href='/'>
             <Logo src={logo} alt="logo" />
           </NavLogo>
           <MenuIcon onClick={handleClick}>

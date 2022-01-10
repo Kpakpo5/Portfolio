@@ -1,11 +1,15 @@
 import styled, {createGlobalStyle} from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', 'Roboto', sans-serif;
+    color: white;
     background: #000;
   }
 `;

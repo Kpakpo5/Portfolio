@@ -44,19 +44,25 @@ export const NavLogo = styled.a`
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 100px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.66;
+  }
 
   @media screen and (max-width: 768px) {
-    margin: 0 0 0 15px;
+    margin: 0 0 0 20px;
   }
 `;
 
 export const Logo = styled.img`
 object-fit: cover;
-width: 50px;
-height: 50px;
+width: 45px;
+height: 45px;
 `;
+
 
 export const MenuIcon = styled.div`
   display: none;
@@ -151,26 +157,21 @@ export const SocialSection = styled.div`
   height: 110px;
 
   @media screen and (max-width: 768px) {
-    height: 30px;
-    width: 100px;
-    position: absolute;
-    top: 25px;
-    left: calc(50vw - 50px);
-    flex-direction: row;
+   display: none;
   }
 `;
 
 export const SocialLink = styled.a`
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, border-top 0.12s ease, border-right 0.12s ease;
 
-  @media screen and (max-width: 768px) {
-    height: 30px;
-    width: 30px;
-  }
   
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translate(4px,-4px);
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
 
   & > * {

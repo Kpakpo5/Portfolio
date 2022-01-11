@@ -33,6 +33,17 @@ const fadeUp = keyframes`
   }
 `; 
 
+const blink = keyframes`
+  50% {
+    opacity: 0;
+  }
+`;
+
+const pointDown = keyframes`
+  100% { transform: translateY(0)}
+  0%{ transform: translateY(11px)}
+`;
+
 export const HomeSection = styled.section`
 padding-top: 44px;
 @media screen and (max-width: 768px){
@@ -50,6 +61,7 @@ background-color: white;
 `;
 
 export const Intro = styled.div`
+position: relative;
 display: flex;
 flex-direction: column;
 margin-top: 55px;
@@ -89,3 +101,28 @@ margin-top: 55px;
   }
 `;
 
+export const ScrollInvite = styled.div`
+  display: flex;
+  position: fixed;
+  left: 40vw;
+  bottom: 8vw;
+  font-size: 2rem;
+  font-weight: bold;
+
+  @media screen and (max-width: 480px) {
+    left: 10vw;
+    font-size: 1.5rem;
+  }
+
+  & > p {
+    animation-name: ${blink};
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    & > span {
+    display: inline-block;
+    margin-left: 15px;
+    animation: ${pointDown} 2s alternate infinite;
+    }
+  }
+`;

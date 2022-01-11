@@ -1,7 +1,29 @@
-import { HomeSection, Greet, Intro } from './Home.elements';
+import { useState, useEffect } from 'react';
+import { HomeSection, Greet, Intro, ScrollInvite } from './Home.elements';
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
+
+  const [display, setDisplay] = useState(false);
+
+  const [visible, setVisible] = useState(true);
+
+  const onScroll = () => {
+    setVisible(false);
+  }
+
+  useEffect(() => {
+    setTimeout(() => 
+      setDisplay(true), 7777)
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll",onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+    }, []);
+
   return (
     <>
       <HomeSection id="accueil">
@@ -21,12 +43,19 @@ const Home = () => {
           }}
           />
         </Greet>
-        <Intro>
-          <h1>Moi c'est</h1>
-          <h2>Kpakpo Akue.</h2>
-          <h3>Je suis développeur Web.</h3>
-          <p>" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
-        </Intro>
+        { display &&
+          <Intro>
+            <h1>Moi c'est</h1>
+            <h2>Kpakpo Akue.</h2>
+            <h3>Je suis développeur Web.</h3>
+            <p title="citation">" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
+            { visible &&
+              <ScrollInvite>
+                <p>Bonne visite !!<span>&#128071;</span></p>
+              </ScrollInvite>
+            }
+          </Intro>
+        }
       </HomeSection>
     </>
 

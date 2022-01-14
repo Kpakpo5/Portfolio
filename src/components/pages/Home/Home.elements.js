@@ -45,26 +45,30 @@ const pointDown = keyframes`
 `;
 
 export const HomeSection = styled.section`
-padding-top: 44px;
-@media screen and (max-width: 768px){
-padding-top: 0;
-}
+  padding-top: 44px;
+  @media screen and (max-width: 768px){
+  padding-top: 0;
+  }
 `;
 
 export const Greet = styled.div`
-color: white;
-font-size: 33px;
-background-color: white;
-@media screen and (max-width: 480px) {
-  font-size: 22px;
-}
+  color: white;
+  font-size: 33px;
+  background-color: white;
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+  }
+
+  & > .Typewriter > .Typewriter__cursor {
+    display: none;
+  }
 `;
 
 export const Intro = styled.div`
-position: relative;
-display: flex;
-flex-direction: column;
-margin-top: 55px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
 
   & > h1 {
     font-size: 1rem;
@@ -110,7 +114,7 @@ export const ScrollInvite = styled.div`
   font-weight: bold;
 
   @media screen and (max-width: 480px) {
-    left: 10vw;
+    left: 20vw;
     font-size: 1.5rem;
   }
 

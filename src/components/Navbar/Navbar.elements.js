@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import withReveal from "react-reveal/withReveal";
+import Fade from 'react-reveal/Fade';
 import { Container } from '../../globalStyles';
 
 export const Nav = styled.nav`
@@ -39,7 +41,8 @@ export const NavbarContainer = styled(Container)`
 ${Container}
 `;
 
-export const NavLogo = styled.a`
+export const NavLogo = withReveal(styled.a`
+  display: block;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
@@ -55,9 +58,10 @@ export const NavLogo = styled.a`
   @media screen and (max-width: 768px) {
     margin: 0 0 0 20px;
   }
-`;
+`, <Fade top/>);
 
 export const Logo = styled.img`
+filter: brightness(1.1);
 object-fit: cover;
 width: 45px;
 height: 45px;
@@ -78,7 +82,7 @@ export const MenuIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.ul`
+export const NavMenu = withReveal(styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +100,7 @@ export const NavMenu = styled.ul`
     transition: all 0.5s ease;
     background: #000;
   }
-`;
+`, <Fade left/>);
 
 export const NavItem = styled.li`
   height: 80px;
@@ -149,7 +153,7 @@ export const NavLink = styled.a`
   }
 `;
 
-export const SocialSection = styled.div`
+export const SocialSection = withReveal(styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,7 +163,7 @@ export const SocialSection = styled.div`
   @media screen and (max-width: 768px) {
    display: none;
   }
-`;
+`, <Fade left/>);
 
 export const SocialLink = styled.a`
   height: 30px;

@@ -9,6 +9,7 @@ const Sections = styled.div`
 
   @media screen and (max-width: 768px) {
     margin: 0;
+    max-width: 100vw;
     padding: 5vw;
   }
 `;

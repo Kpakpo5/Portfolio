@@ -46,8 +46,12 @@ const pointDown = keyframes`
 
 export const HomeSection = styled.section`
   padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media screen and (max-width: 768px){
-  padding-top: 0;
+    display: block;
+    padding-top: 0;
   }
 `;
 
@@ -106,15 +110,15 @@ export const Intro = styled.div`
 `;
 
 export const ScrollInvite = styled.div`
-  display: flex;
   position: fixed;
-  left: 40vw;
-  bottom: 8vw;
+  background-color: transparent;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
   font-size: 2rem;
   font-weight: bold;
 
   @media screen and (max-width: 480px) {
-    left: 20vw;
     font-size: 1.5rem;
   }
 

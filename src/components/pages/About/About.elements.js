@@ -67,8 +67,10 @@ export const Skills = styled.div`
 export const Techs = styled.ul`
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
+
   & > li {
-    margin-right: 20px;
+    margin: 20px;
   }
 `;
 
@@ -94,6 +96,7 @@ export const TechIcon = styled.div`
 
 export const TechName = styled.div`
   font-size: 1rem;
+  text-align: center;
   font-weight: bold;
   margin-bottom: 3px;
   background-color: white;

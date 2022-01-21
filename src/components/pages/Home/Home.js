@@ -6,10 +6,10 @@ const Home = () => {
 
   const [display, setDisplay] = useState(false);
 
-  const [visible, setVisible] = useState(true);
+  const [visibility, setVisibility] = useState(true);
 
   const onScroll = () => {
-    setVisible(false);
+    setVisibility(false);
   }
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Home = () => {
             <h2>Kpakpo Akue.</h2>
             <h3>Je suis développeur Web.</h3>
             <p title="citation">" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
-            { visible &&
+            { visibility &&
               <ScrollInvite>
                 <p>Bonne visite !!<span>&#128071;</span></p>
               </ScrollInvite>

@@ -6,6 +6,10 @@ export const ProjectsSection = styled.section`
   align-items: center;
   padding-top: 40px;
 
+  & > .react-reveal {
+    width: 100%;
+  }
+
   & > p {
     margin-bottom: 2rem;
   }
@@ -58,7 +62,7 @@ export const ProjectLinks = styled.div`
   left: 5%;
   height: 90%;
   width: 90%;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.9);
 `;
 
 export const ProjectLink = styled.a`

@@ -1,14 +1,20 @@
 
 import test from '../../../assets/test.jpg';
 import test1 from '../../../assets/test1.jpg';
+import { SectionTitle } from "../../../globalStyles";
 import { ProjectsSection, ProjectsContainer } from "./Projects.elements";
 import Project from './Project';
+import Zoom from 'react-reveal/Zoom';
+
 
 const Projects = () => {
 
   return (
     <>
       <ProjectsSection id="projets">
+        <Zoom bottom>
+          <SectionTitle>Portfolio</SectionTitle>
+        </Zoom>
         <p>Ci dessous un aperçu de mes réalisations</p>
         <ProjectsContainer>
           <Project 

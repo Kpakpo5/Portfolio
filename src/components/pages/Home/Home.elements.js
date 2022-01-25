@@ -123,6 +123,7 @@ export const ScrollInvite = styled.div`
   }
 
   & > p {
+    white-space: nowrap;
     animation-name: ${blink};
     animation-duration: 4s;
     animation-iteration-count: infinite;

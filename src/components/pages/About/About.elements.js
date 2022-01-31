@@ -6,8 +6,6 @@ export const AboutSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  max-width: 1000px;
 
   & > .react-reveal {
     width: 100%;
@@ -26,7 +24,6 @@ export const Narrative = styled.div`
   @media screen and (max-width: 768px) {
     margin-left: 0;
     margin-top: 44px;
-    font-size: .9rem;
   }
 
   & > p {
@@ -66,46 +63,57 @@ export const Skills = styled.div`
 
 export const Techs = styled.ul`
   display: flex;
+  justify-content: center;
   list-style: none;
   flex-wrap: wrap;
 
   & > li {
-    margin: 20px;
+    margin: 1rem;
   }
 `;
 
 export const Tech = styled.li`
   display: flex;
   flex-direction:column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: white;
   width: 120px;
   height: 80px;
   border-radius: 3px;
+
+  @media screen and (max-width: 480px) {
+    width: 33vw;
+    height: 22vw;
+  }
 `;
 
 export const TechIcon = styled.div`
-  font-size: 2rem;
   background-color: white;
+  overflow: hidden;
 
   & > svg {
     margin-top: 2px;
   }
 `;
 
-export const TechName = styled.div`
+export const TechName = styled.h4`
+  display: inline-block;
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 3px;
   background-color: white;
   color: black;
 `;
 
 export const Vision = styled.div`
   font-size: 1rem;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
+
+  & > p {
+    margin-bottom: 1rem;
+  }
+
 `;
 
 export const PLink = styled.a`

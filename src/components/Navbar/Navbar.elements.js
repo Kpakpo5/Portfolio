@@ -19,8 +19,8 @@ export const Nav = styled.nav`
     width : 100%;
     height: 80px;
     justify-content: center;
-    position: sticky;
-    top: 0;
+    top: ${({hidden}) => (hidden ? '-100px' : 0)};
+    transition: all 0.8s ease;
     z-index: 999;
   }
 `;
@@ -167,6 +167,7 @@ export const SocialSection = withReveal(styled.div`
 `, <Fade left/>);
 
 export const SocialLink = styled.a`
+  color: white;
   height: 30px;
   width: 30px;
   border-radius: 4px;

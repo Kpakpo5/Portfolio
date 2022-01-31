@@ -45,18 +45,17 @@ const About = () => {
           </Story>
           <Skills>
             <Vision>
-              <p>En tant que développeur je m'applique à rendre mes réalisations intuitives tout en respectant les standards d'accessibilité , tout cela sur la base d'un code lisible.</p>
+              <p>Ma ligne directrice est de m'appliquer à rendre mes réalisations intuitives tout en respectant les standards d'accessibilité , tout cela sur la base d'un code lisible.</p>
               <p>Voici la liste non exhaustive des langages et technologies que je sais mettre à profit :</p>
             </Vision>
-            <IconContext.Provider value={{ style: {color: '#000', fontSize: '3rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
+            <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
               <Techs>
                 <Tech>
                   <TechIcon><SiStyledcomponents /></TechIcon>
                   <TechName>Styled Components</TechName>
                 </Tech>
                 <Tech>
-                  <TechIcon><SiPhp /></TechIcon>
-                  <TechName>PHP</TechName>
+                  <TechIcon><SiPhp style={{fontSize: '4rem'}}/></TechIcon>
                 </Tech>
                 <Tech>
                   <TechIcon><SiNextdotjs /></TechIcon>
@@ -75,8 +74,7 @@ const About = () => {
                   <TechName>Redux</TechName>
                 </Tech>
                 <Tech>
-                  <TechIcon><SiMysql /></TechIcon>
-                  <TechName>MySQL</TechName>
+                  <TechIcon><SiMysql style={{fontSize: '4rem'}}/></TechIcon>
                 </Tech>
               </Techs>
             </IconContext.Provider>

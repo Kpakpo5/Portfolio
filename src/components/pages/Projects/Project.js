@@ -10,7 +10,7 @@ import {
   ProjectLink
 } from "./Projects.elements";
 
-const Project = ({ name, description, tools, image }) => {
+const Project = ({ name, description, tools, image, linkName, source, repository }) => {
 
   const [display, setDisplay] = useState(false);
 
@@ -31,8 +31,8 @@ const Project = ({ name, description, tools, image }) => {
       <ProjectImage src={image}/>
         { display &&
           <ProjectLinks>
-            <ProjectLink></ProjectLink>
-            <ProjectLink></ProjectLink>
+            <ProjectLink href={repository} target="_blank">Dépôt Github</ProjectLink>
+            <ProjectLink href={source} target="_blank">{linkName}</ProjectLink>
           </ProjectLinks>
         }
         </ImageContainer>

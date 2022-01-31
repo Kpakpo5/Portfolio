@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import logo from '../../assets/logo.png';
@@ -21,10 +21,31 @@ const Navbar = () => {
 
   const handleClick = () => setOpen(!open);
 
+  const [hidden, setHidden] = useState(false);
+
+  let prevScrollPos = window.scrollY;
+
+  const handleScroll = () => {
+    let currentScrollPos = window.scrollY;
+    if(prevScrollPos < currentScrollPos) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+    prevScrollPos = currentScrollPos;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll",handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <>
     <IconContext.Provider value={{ color: '#red' }}>
-      <Nav>
+      <Nav hidden={hidden}>
         <NavbarContainer>
           <NavLogo href='/'>
             <Logo src={logo} alt="logo" />

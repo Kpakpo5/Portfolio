@@ -45,11 +45,11 @@ const pointDown = keyframes`
 `;
 
 export const HomeSection = styled.section`
-  padding-top: 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media screen and (max-width: 768px){
+  
+  @media screen and (max-width: 480px){
     display: block;
     padding-top: 0;
   }

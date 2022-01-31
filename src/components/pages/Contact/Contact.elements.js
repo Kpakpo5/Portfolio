@@ -2,27 +2,46 @@ import styled from "styled-components";
 
 export const ContactSection = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
 
   & > .react-reveal {
     width: 100%;
   }
 
+`;
+
+export const SectionContent = styled.div`
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
-`;
+`
 
 export const CvContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 30%;
+
+  & > p {
+    color: #b3b3b3;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+  }
 `
 
 export const Cv = styled.a`
   text-decoration: none;
+  color: #fff;
   font-weight: bold;
   border: 1px #fff solid;
   padding: 8px 12px;
@@ -39,21 +58,37 @@ export const Cv = styled.a`
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 3rem;
   width: 60%;
   max-width: 700px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    padding: 1rem;
+    margin-top: 50px;
   }
 `;
 
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  padding: 3rem;
+  margin-top: 33px;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  & > input,
+  & > textarea {
+    color: black;
+    background: white;
+    filter: brightness(0.8);
+
+    &:focus {
+      filter: brightness(1.1);
+    }
+  }
 `;
 
 export const ContactInput = styled.input`
@@ -73,8 +108,10 @@ export const ContactTextArea = styled.textarea`
 `;
 
 export const SubmitButton = styled.button`
-  padding: 6px 10px;
+  padding: 8px 12px;
   border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
   cursor: pointer;
   align-self: flex-start;
 `;

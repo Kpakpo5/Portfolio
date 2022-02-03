@@ -29,10 +29,10 @@ const About = () => {
             </Picture>
             <Narrative>
               <p>
-              &Agrave; la fin de mes études d'Histoire en 2016 , piqué par la curiosité , je décide (enfin!) de m'intéresser aux coulisses du Web après avoir l'avoir parcouru pendant des années. Les quelques recherches que j'ai effectuées m'ont plongé et perdu dans l'immense diversité des langages, technologies et outils servant à la réalisation de sites internet. Ce fut ma première rencontre avec le développement Web.
+              &Agrave; la fin de mes études d'Histoire en 2016 , piqué par la curiosité , je décide (enfin!) de m'intéresser aux coulisses du Web après avoir l'avoir parcouru pendant des années. Les quelques recherches effectuées m'ont plongé et perdu dans l'immense diversité des langages, technologies et outils servant à la réalisation de sites internet. Ce fut ma première rencontre avec le développement Web.
               </p>
               <p>
-                Mais ce n'est qu'en 2019 , de plus en plus attiré par la programmation, que j'ai écrit mes premières lignes de code et commencé à envisager une reconversion dans le domaine. J'ai par la suite eu la chance de suivre la formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink> où j'ai acquis de solides bases , notamment en Javascript et PHP, pour finalement passer et obtenir le titre professionnel.
+                Ce n'est qu'en 2019 , de plus en plus attiré par la programmation, que j'ai écrit mes premières lignes de code et commencé à envisager une reconversion dans le domaine. J'ai par la suite eu la chance de suivre la formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink> où j'ai acquis de solides bases , notamment en Javascript et PHP, pour finalement passer et obtenir le titre professionnel.
               </p>
               <p>
                 Aujourd'hui je m'emploie à développer mes compétences et techniques via mes projets tout en continuant l'apprentissage d'outils de développement , notamment les technologies Front-End pour lesquelles j'ai un attrait particulier.

@@ -3,7 +3,7 @@ import creatorz from '../../../assets/creatorz.png';
 import flag from '../../../assets/flag-memo.png';
 import { SectionTitle } from "../../../globalStyles";
 import { ProjectsSection, ProjectsContainer } from "./Projects.elements";
-import Project from './Project';
+import Project, {ImagelessProject} from './Project';
 
 const Projects = () => {
 
@@ -30,6 +30,12 @@ const Projects = () => {
             linkName= "Site Web"
             source="https://flag-memo.netlify.app/"
             repository="https://github.com/Kpakpo5/Flag-Memo"
+          />
+          <ImagelessProject 
+            name="Site personnel"
+            description= "Le site sur lequel vous vous trouvez ."
+            tools="Réalisé avec : React, styled-components ."
+            repository="https://github.com/Kpakpo5/Portfolio"
           />
         </ProjectsContainer>
       </ProjectsSection>

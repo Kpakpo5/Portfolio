@@ -38,7 +38,11 @@ export const ProjectsContainer = styled.ul`
   }
 
   & > .react-reveal {
-    margin-bottom: 44px;
+    margin-bottom: 88px;
+
+    @media screen and (max-width: 768px) {
+    margin-bottom: 55px;
+  }
   }
 `;
 
@@ -53,18 +57,77 @@ export const ProjectTemplate = withReveal(styled.li`
   }
 `, <Fade bottom/>);
 
+export const ProjectSmallTemplate = withReveal(styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    border: none;
+    flex-direction: column;
+    align-items: start;
+  }
+`, <Fade bottom/>);
+
+export const Infos = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  & > * {
+    width: 100%;
+  }
+
+`;
+
+export const LinkContainer = styled.div`
+  width: 30%;
+  background: transparent;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin-top: 5px;
+  }
+`;
+
+export const SingleLink = styled.a`
+  display: flex;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: rgba(255 ,255 ,255, 0.09);
+  font-size : 0.9rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+
+  @media screen and (max-width: 768px) {
+    width: 44vw;
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background-color: rgba(255 ,255 ,255, 0.4);
+  }
+`
+
 export const ProjectName = styled.h3`
   font-size: 20px;
   color: #FFCC45;
 `;
 
-export const IconLinks = styled.div`
+export const ProjectMobileLinks = styled.div`
   position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  /* padding: 0 1%; */
   bottom: -44px;
   left: 0;
   width: 100%;
@@ -75,7 +138,7 @@ export const IconLinks = styled.div`
   }
 `;
 
-export const IconLink = styled.a`
+export const ProjectMobileLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;

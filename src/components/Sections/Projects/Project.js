@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import {
   ProjectTemplate,
+  ProjectSmallTemplate,
+  Infos,
+  LinkContainer,
+  SingleLink,
   ProjectName,
   ProjectDescription,
   ProjectTools,
@@ -8,11 +12,19 @@ import {
   ProjectImage,
   ProjectLinks,
   ProjectLink,
-  IconLinks,
-  IconLink
+  ProjectMobileLinks,
+  ProjectMobileLink
 } from "./Projects.elements";
 
-const Project = ({ name, description, tools, image, linkName, source, repository }) => {
+const Project = ({
+  name,
+  description,
+  tools,
+  image,
+  linkName,
+  source,
+  repository
+}) => {
 
   const [display, setDisplay] = useState(false);
 
@@ -38,11 +50,33 @@ const Project = ({ name, description, tools, image, linkName, source, repository
             </ProjectLinks>
           }
       </ImageContainer>
-      <IconLinks>
-        <IconLink href={repository} target="_blank">Dépôt Github</IconLink>
-        <IconLink href={source} target="_blank">{linkName}</IconLink>
-      </IconLinks>
+      <ProjectMobileLinks>
+        <ProjectMobileLink href={repository} target="_blank">Dépôt Github</ProjectMobileLink>
+        <ProjectMobileLink href={source} target="_blank">{linkName}</ProjectMobileLink>
+      </ProjectMobileLinks>
     </ProjectTemplate>
   );
   }
+
+export const ImagelessProject =({
+  name,
+  description,
+  tools,
+  repository
+}) => {
+  return (
+    <ProjectSmallTemplate>
+      <Infos>
+        <ProjectName>{name}</ProjectName>
+        <ProjectDescription>{description}</ProjectDescription>
+        <ProjectTools>{tools}</ProjectTools>
+      </Infos>
+      <LinkContainer>
+        <SingleLink href={repository} target="_blank">Dépôt Github</SingleLink>
+      </LinkContainer>
+    </ProjectSmallTemplate>
+    )
+}
+
+
 export default Project;

@@ -77,21 +77,21 @@ export const Intro = styled.div`
   & > h1 {
     font-size: 1rem;
     animation-name: ${fadeInLeft};
-    animation-duration: 0.7s;
+    animation-duration: 1s;
   }
 
   & > h2 {
     font-size : clamp(40px, 8vw, 80px);
     color: #FFCC45;
     animation-name: ${fadeInRight};
-    animation-duration: 1s;
+    animation-duration: 1.3s;
   }
 
   & > h3 {
     font-size: clamp(30px, 6vw, 60px);
     color: #FFFF00;
     animation-name: ${fadeInLeft};
-    animation-duration: 1.3s;
+    animation-duration: 1.6s;
   }
   
   & > p {
@@ -100,7 +100,7 @@ export const Intro = styled.div`
     font-style: italic;
     font-weight: bold;
     animation-name: ${fadeUp};
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     & > span {
       font-size: .8rem;
       font-style: normal;

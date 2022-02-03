@@ -16,16 +16,12 @@ import {
   Vision
 } from "./About.elements";
 import Me from '../../../assets/me.png'
-import Zoom from 'react-reveal/Zoom';
-
 
 const About = () => {
   return (
     <>
       <AboutSection id="profil">
-        <Zoom bottom>
-          <SectionTitle>Profil</SectionTitle>
-        </Zoom>
+        <SectionTitle>Profil</SectionTitle>
         <AboutContent>
           <Story>
             <Picture>

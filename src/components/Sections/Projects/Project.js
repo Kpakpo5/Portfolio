@@ -7,7 +7,9 @@ import {
   ImageContainer,
   ProjectImage,
   ProjectLinks,
-  ProjectLink
+  ProjectLink,
+  IconLinks,
+  IconLink
 } from "./Projects.elements";
 
 const Project = ({ name, description, tools, image, linkName, source, repository }) => {
@@ -28,14 +30,18 @@ const Project = ({ name, description, tools, image, linkName, source, repository
       <ProjectDescription>{description}</ProjectDescription>
       <ProjectTools>{tools}</ProjectTools>
       <ImageContainer onMouseEnter={handleonMouseEnter} onMouseLeave={handleonMouseLeave}>
-      <ProjectImage src={image}/>
-        { display &&
-          <ProjectLinks>
-            <ProjectLink href={repository} target="_blank">Dépôt Github</ProjectLink>
-            <ProjectLink href={source} target="_blank">{linkName}</ProjectLink>
-          </ProjectLinks>
-        }
-        </ImageContainer>
+        <ProjectImage src={image}/>
+          { display &&
+            <ProjectLinks>
+              <ProjectLink href={repository} target="_blank">Dépôt Github</ProjectLink>
+              <ProjectLink href={source} target="_blank">{linkName}</ProjectLink>
+            </ProjectLinks>
+          }
+      </ImageContainer>
+      <IconLinks>
+        <IconLink href={repository} target="_blank">Dépôt Github</IconLink>
+        <IconLink href={source} target="_blank">{linkName}</IconLink>
+      </IconLinks>
     </ProjectTemplate>
   );
   }

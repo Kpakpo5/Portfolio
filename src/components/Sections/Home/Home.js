@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <HomeSection id="accueil">
+      <HomeSection id="bienvenue">
         <Greet>
           <Typewriter 
           onInit={(typewriter) => {

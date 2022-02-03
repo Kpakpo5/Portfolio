@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import withReveal from "react-reveal/withReveal";
+import Fade from 'react-reveal/Fade';
 
 export const ContactSection = styled.section`
   display: flex;
@@ -11,7 +13,7 @@ export const ContactSection = styled.section`
 
 `;
 
-export const SectionContent = styled.div`
+export const SectionContent = withReveal(styled.div`
   display: flex;
   max-width: 1000px;
   justify-content: space-between;
@@ -19,12 +21,12 @@ export const SectionContent = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
-`
+`, <Fade bottom/>);
 
 export const CvContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 30%;
 
@@ -35,9 +37,10 @@ export const CvContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    align-items: center;
     justify-content: center;
   }
-`
+`;
 
 export const Cv = styled.a`
   text-decoration: none;
@@ -65,6 +68,10 @@ export const FormContainer = styled.div`
     width: 100%;
     margin-top: 50px;
   }
+
+  & > p {
+    color: #b3b3b3;
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -79,6 +86,10 @@ export const ContactForm = styled.form`
     padding: 1rem;
   }
 
+  & > label {
+    color: #b3b3b3;
+  }
+
   & > input,
   & > textarea {
     color: black;
@@ -86,7 +97,7 @@ export const ContactForm = styled.form`
     filter: brightness(0.8);
 
     &:focus {
-      filter: brightness(1.1);
+      filter: brightness(1);
     }
   }
 `;

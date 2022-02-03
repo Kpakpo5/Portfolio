@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
+import withReveal from "react-reveal/withReveal";
+import Zoom from 'react-reveal/Zoom';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -9,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    color: #b3b3b3;
+    color: #fff;
     background: #000;
   }
 `;
@@ -22,7 +24,7 @@ export const Container = styled.div`
   margin-left: auto;
   `;
 
-export const SectionTitle = styled.h2`
+export const SectionTitle = withReveal(styled.h2`
   display: flex;
   color: black;
   background: white;
@@ -44,7 +46,7 @@ export const SectionTitle = styled.h2`
     background: linear-gradient(to left, black, white);
 	}
 
-`;
+`, <Zoom/>);
 
 
 

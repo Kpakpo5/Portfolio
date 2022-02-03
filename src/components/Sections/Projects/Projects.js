@@ -4,17 +4,13 @@ import flag from '../../../assets/flag-memo.png';
 import { SectionTitle } from "../../../globalStyles";
 import { ProjectsSection, ProjectsContainer } from "./Projects.elements";
 import Project from './Project';
-import Zoom from 'react-reveal/Zoom';
-
 
 const Projects = () => {
 
   return (
     <>
       <ProjectsSection id="projets">
-        <Zoom bottom>
-          <SectionTitle>Portfolio</SectionTitle>
-        </Zoom>
+        <SectionTitle>Portfolio</SectionTitle>
         <p>Ci-dessous mes principales réalisations .</p>
         <ProjectsContainer>
           <Project 

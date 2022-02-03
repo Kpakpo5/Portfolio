@@ -1,7 +1,16 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import withReveal from "react-reveal/withReveal";
 import Fade from 'react-reveal/Fade';
 import { Container } from '../../globalStyles';
+
+const animateNav = keyframes`
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+`;
 
 export const Nav = styled.nav`
   position: fixed;
@@ -22,6 +31,8 @@ export const Nav = styled.nav`
     top: ${({hidden}) => (hidden ? '-100px' : 0)};
     transition: all 0.8s ease;
     z-index: 999;
+    animation-name: ${animateNav};
+    animation-duration: 1.5s;
   }
 `;
 
@@ -42,7 +53,7 @@ export const NavbarContainer = styled(Container)`
 ${Container}
 `;
 
-export const NavLogo = withReveal(styled.a`
+export const NavLogo = styled.a`
   display: block;
   color: #fff;
   cursor: pointer;
@@ -59,7 +70,7 @@ export const NavLogo = withReveal(styled.a`
   @media screen and (max-width: 768px) {
     margin: 0 0 0 20px;
   }
-`, <Fade top/>);
+`;
 
 export const Logo = styled.img`
 filter: brightness(1.1);
@@ -83,7 +94,7 @@ export const MenuIcon = styled.div`
   }
 `;
 
-export const NavMenu = withReveal(styled.ul`
+export const NavMenu = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +112,7 @@ export const NavMenu = withReveal(styled.ul`
     transition: all 0.5s ease;
     background: #000;
   }
-`, <Fade left/>);
+`;
 
 export const NavItem = styled.li`
   height: 80px;
@@ -111,7 +122,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavBarLink = styled.a`
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
@@ -129,11 +140,11 @@ export const NavLink = styled.a`
     content: "";
     display: block;
     height: 2px;
-    left: 50%;
+    left: ${({decoration}) => (decoration ? 0 : '50%')};
     position: absolute;
     background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+    width: ${({decoration}) => (decoration ? '100%' : 0)};
   }
 
   &:hover:after {

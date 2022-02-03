@@ -1,4 +1,6 @@
 import styled, {keyframes} from "styled-components";
+import withReveal from "react-reveal/withReveal";
+import Fade from 'react-reveal/Fade';
 
 const Spread = keyframes`
   0% {
@@ -29,35 +31,75 @@ export const ProjectsContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* width: 80%; */
   max-width: 800px;
-
-  & > li {
-    margin-bottom: 33px;
-  }
 
   @media screen and (max-width: 768px) {
     width: 99%;
   }
+
+  & > .react-reveal {
+    margin-bottom: 44px;
+  }
 `;
 
-export const ProjectTemplate = styled.li`
+export const ProjectTemplate = withReveal(styled.li`
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
-`;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 44px;
+  }
+`, <Fade bottom/>);
 
 export const ProjectName = styled.h3`
   font-size: 20px;
   color: #FFCC45;
 `;
 
+export const IconLinks = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  /* padding: 0 1%; */
+  bottom: -44px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+`;
+
+export const IconLink = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: rgba(255 ,255 ,255, 0.09);
+  font-size : 0.9rem;
+  font-weight: bold;
+  width: 49.5%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(255 ,255 ,255, 0.4);
+  }
+`;
+
 export const ProjectDescription = styled.p`
   margin-bottom: 5px;
+  color: #bfbfbf;
 `;
 
 export const ProjectTools = styled.small`
-  //
+  letter-spacing: .05rem;
 `;
 
 export const ImageContainer = styled.div`
@@ -92,6 +134,10 @@ export const ProjectLinks = styled.div`
   background-color: rgba(255,255,255,.95);
   animation: ${Spread};
   animation-duration: .5s;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ProjectLink = styled.a`

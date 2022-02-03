@@ -27,6 +27,7 @@ export const Narrative = styled.div`
   }
 
   & > p {
+    color:#bfbfbf;
     margin-bottom: 10px;
   }
 `
@@ -55,11 +56,11 @@ export const Story = withReveal(styled.div`
   }
 `, <Fade bottom/>);
 
-export const Skills = styled.div`
+export const Skills = withReveal(styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-`;
+`, <Fade bottom/>);
 
 export const Techs = styled.ul`
   display: flex;
@@ -98,12 +99,17 @@ export const TechIcon = styled.div`
 `;
 
 export const TechName = styled.h4`
-  display: inline-block;
+  display: block;
+  width: 100%;
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
   background-color: white;
   color: black;
+
+  @media screen and (max-width: 480px) {
+    font-size: 3vw;
+  }
 `;
 
 export const Vision = styled.div`
@@ -112,6 +118,7 @@ export const Vision = styled.div`
 
   & > p {
     margin-bottom: 1rem;
+    color: #bfbfbf;
   }
 
 `;

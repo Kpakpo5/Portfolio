@@ -44,7 +44,9 @@ export const CvContainer = styled.div`
 
 export const Cv = styled.a`
   text-decoration: none;
-  color: #fff;
+  background-color: #fff;
+  color: black;
+  filter: brightness(0.8);
   font-weight: bold;
   border: 1px #fff solid;
   padding: 8px 12px;
@@ -53,8 +55,7 @@ export const Cv = styled.a`
   white-space: nowrap;
 
   &:hover {
-    background-color: #fff;
-    color: black;
+    filter: brightness(1);
   }
 `
 
@@ -92,6 +93,8 @@ export const ContactForm = styled.form`
 
   & > input,
   & > textarea {
+    border: 1px solid #ddd;
+    border-radius: 3px;
     color: black;
     background: white;
     filter: brightness(0.8);
@@ -104,25 +107,34 @@ export const ContactForm = styled.form`
 
 export const ContactInput = styled.input`
   height: 30px;
-  border-radius: 5px;
   margin: 8px 0 16px 0;
   padding: 0.5rem;
 `;
 
 export const ContactTextArea = styled.textarea`
   resize: none;
-  border-radius: 3px;
   width: 100%;
   min-height: 111px;
   padding: 0.5rem;
-  margin: 8px 0 16px 0;
+  margin: 8px 0 22px 0;
 `;
 
 export const SubmitButton = styled.button`
-  padding: 8px 12px;
-  border-radius: 5px;
-  color: #fff;
+  padding: 10px 16px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: black;
+  border: none;
   font-weight: bold;
   cursor: pointer;
   align-self: flex-start;
+
+  @media screen and (max-width: 768px) {
+    width: 60%;
+    align-self: center;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;

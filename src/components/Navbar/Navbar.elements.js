@@ -20,7 +20,7 @@ export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 95vh;
+  height: 100vh;
   width: 15vw;
   font-size: 0.9rem;
 

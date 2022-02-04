@@ -62,9 +62,11 @@ export const ProjectSmallTemplate = withReveal(styled.li`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border: solid 1px rgba(255 ,255 ,255, 0.09);
+  border-radius: 3px;
+  padding: 10px;
 
   @media screen and (max-width: 768px) {
-    border: none;
     flex-direction: column;
     align-items: start;
   }

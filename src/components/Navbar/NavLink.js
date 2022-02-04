@@ -9,12 +9,9 @@ const NavLink = ({ navLinkId, text, path, setActiveNavLinkId }) => {
 
   const handleClick = () => {
     const newActiveLinkId = (' ' + navLinkId).slice(1);
-    console.log(newActiveLinkId);
     setActiveNavLinkId(newActiveLinkId);
     
-    console.log(navLinkId);
   }
-  console.log(activeNavLinkId);
   useEffect(() => {
     if(navLinkId === activeNavLinkId) {
       setDecoration(true);

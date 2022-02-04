@@ -51,7 +51,7 @@ const Home = () => {
             <p title="citation">" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
             { visibility &&
               <ScrollInvite>
-                <p>Bonne visite !!<span>&#128071;</span></p>
+                <p><span>&#128071;</span></p>
               </ScrollInvite>
             }
           </Intro>

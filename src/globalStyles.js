@@ -37,13 +37,13 @@ export const SectionTitle = withReveal(styled.h2`
   &:before {
     content: "";
     flex: 1;
-    background: linear-gradient(to right, black, white);
+    background: linear-gradient(to right, #000, white);
   }
   
   &:after {
     content: "";
     flex: 1;
-    background: linear-gradient(to left, black, white);
+    background: linear-gradient(to left, #000, white);
 	}
 
 `, <Zoom/>);

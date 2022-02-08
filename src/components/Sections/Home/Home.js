@@ -34,7 +34,7 @@ const Home = () => {
             .typeString("Salut à toi jeune entrepreneur !")
             .pauseFor(600)
             .deleteChars(20)
-            .typeString("cher visiteur ! <br /> Bienvenue sur mon site &#128522;")
+            .typeString("cher visiteu(se)r ! <br /> Bienvenue sur mon site &#128522;")
             .start();
           }}
           options={{

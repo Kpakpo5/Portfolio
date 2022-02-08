@@ -10,15 +10,24 @@ import {
   ContactForm,
   ContactInput,
   ContactTextArea,
-  SubmitButton
+  SubmitButton,
+  ValidateMessage
 } from "./Contact.elements";
 import CV from '../../../assets/akue_cv.pdf'
 
 const Contact = () => {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [messageHasError, setMessageHasError] = useState(false);
+  const [FormSubmitted, setFormSubmitted] = useState(false);
 
+  const HideValidateMessage = () => {
+    setTimeout(() => {
+      setFormSubmitted(false);
+    }, 6000);
+  }
   const sendMail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
@@ -28,11 +37,17 @@ const Contact = () => {
       'user_vIul8v33ok27Wx1Ydjx9g'
     ).then((res) => {
       console.log('SUCCESS!', res.status, res.text);
+      setMessageHasError(false);
       setName('');
       setEmail('');
       setMessage('');
+      setFormSubmitted(true);
+      HideValidateMessage();
    }, (err) => {
       console.log('FAILED...', err);
+      setMessageHasError(true);
+      setFormSubmitted(true);
+      HideValidateMessage();
    });
   }
 
@@ -50,6 +65,8 @@ const Contact = () => {
             <ContactForm onSubmit={sendMail}>
               <label htmlFor="name">Votre nom</label>
               <ContactInput
+                required
+                minLength={2}
                 type="text"
                 name="name"
                 id="name"
@@ -58,6 +75,7 @@ const Contact = () => {
               />
               <label htmlFor="user_email">Votre e-mail</label>
               <ContactInput
+                required
                 type="email"
                 name="user_email"
                 id="user_email"
@@ -66,10 +84,20 @@ const Contact = () => {
               />
               <label htmlFor="message">Votre message</label>
               <ContactTextArea
+                required
+                minLength={10}
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
+              {FormSubmitted && 
+                <ValidateMessage hasError={messageHasError}>
+                  {messageHasError ? 
+                    "Erreur lors de l'envoi. Vérifiez vos informations et réessayez.":
+                    "Message bien envoyé. Merci!" 
+                  }
+                </ValidateMessage>
+              }
               <SubmitButton>Envoyer</SubmitButton>
             </ContactForm>
           </FormContainer>

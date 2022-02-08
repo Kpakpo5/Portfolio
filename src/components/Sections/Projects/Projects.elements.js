@@ -8,8 +8,8 @@ const Spread = keyframes`
     left: 50%;
   }
   100% {
-    width: 90%;
-    left: 5%;
+    width: 94%;
+    left: 3%;
   }
 `;
 
@@ -62,7 +62,7 @@ export const ProjectSmallTemplate = withReveal(styled.li`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border: solid 1px rgba(255 ,255 ,255, 0.09);
+  border: solid 1px rgba(255 ,255 ,255, 0.2);
   border-radius: 3px;
   padding: 10px;
 
@@ -103,7 +103,7 @@ export const SingleLink = styled.a`
   height: 40px;
   justify-content: center;
   border-radius: 4px;
-  background-color: rgba(255 ,255 ,255, 0.09);
+  background-color: rgba(255 ,255 ,255, 0.1);
   font-size : 0.9rem;
   font-weight: bold;
   color: white;
@@ -145,7 +145,7 @@ export const ProjectMobileLink = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  background-color: rgba(255 ,255 ,255, 0.09);
+  background-color: rgba(255 ,255 ,255, 0.1);
   font-size : 0.9rem;
   font-weight: bold;
   width: 49.5%;

@@ -106,6 +106,7 @@ export const TechName = styled.h4`
   font-weight: bold;
   background-color: white;
   color: black;
+  border-radius: 0 0 3px 3px;
 
   @media screen and (max-width: 480px) {
     font-size: 3vw;
@@ -124,7 +125,7 @@ export const Vision = styled.div`
 `;
 
 export const PLink = styled.a`
-   color: #FFFF00;
+   color: #ffdb7a;
    position: relative;
    text-decoration: none;
   &:after {

@@ -25,7 +25,7 @@ const Footer = () => {
         </SocialItem>
       </Social>
       <Notice>
-        <span>&copy;</span><span>{date}</span><p>KA</p>
+        <span>&copy;</span><span>{date}</span><p>K. A.</p>
       </Notice>
     </FooterContainer>
   );

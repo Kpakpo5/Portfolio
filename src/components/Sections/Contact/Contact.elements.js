@@ -44,18 +44,16 @@ export const CvContainer = styled.div`
 
 export const Cv = styled.a`
   text-decoration: none;
-  background-color: #fff;
-  color: black;
-  filter: brightness(0.8);
+  color: white;
   font-weight: bold;
-  border: 1px #fff solid;
+  border: 2px  #ffdb7a solid;
   padding: 8px 12px;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
   white-space: nowrap;
 
   &:hover {
-    filter: brightness(1);
+    background-color: rgba(255, 219, 122, 0.05);
   }
 `
 
@@ -78,13 +76,20 @@ export const FormContainer = styled.div`
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
-  border: 1px solid #b3b3b3;
+  border: 1px solid rgba(255 ,255 ,255, 0.2);
   border-radius: 5px;
   padding: 3rem;
   margin-top: 33px;
 
   @media screen and (max-width: 768px) {
     padding: 1rem;
+    width: 80%;
+    align-self: center;
+  }
+
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 
   & > label {
@@ -121,20 +126,32 @@ export const ContactTextArea = styled.textarea`
 
 export const SubmitButton = styled.button`
   padding: 10px 16px;
-  border-radius: 3px;
-  background-color: #fff;
+  border-radius: 5px;
+  background-color: #ffdb7a;
   color: black;
   border: none;
+  width: 40%;
   font-weight: bold;
   cursor: pointer;
   align-self: flex-start;
 
-  @media screen and (max-width: 768px) {
-    width: 60%;
+  @media screen and (max-width: 480px) {
+    width: 100%;
     align-self: center;
   }
 
   &:hover {
-    filter: brightness(0.8);
+    filter: brightness(0.7);
   }
+`;
+
+export const ValidateMessage = styled.p`
+  border: 2px solid ${({hasError}) => (hasError ? 'red' : 'green')};
+  border-radius: 3px;
+  font-weight: bold;
+  background: white;
+  color: ${({hasError}) => (hasError ? 'red' : 'green')};
+  padding: 10px;
+  margin-bottom: 22px;
+  align-self: start;
 `;

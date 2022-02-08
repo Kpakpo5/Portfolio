@@ -68,9 +68,8 @@ const Navbar = () => {
             <NavMenu onClick={handleClick} open={open}>
               {navLinks.map(
               ({navLinkId, text, path}) =>
-                <NavItem>
+                <NavItem  key={navLinkId}>
                   <NavLink 
-                    key={navLinkId}
                     navLinkId={navLinkId} 
                     text={text}
                     path={path}

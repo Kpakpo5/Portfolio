@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   position: fixed;
   top : 0;
   left : 0;
-  background: #000000;
+  background: #000;
   display: flex;
   flex-direction: column;
   align-items: center;

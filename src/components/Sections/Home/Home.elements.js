@@ -89,7 +89,7 @@ export const Intro = styled.div`
 
   & > h3 {
     font-size: clamp(30px, 6vw, 60px);
-    color: #FFFF00;
+    color: #ffdb7a;
     animation-name: ${fadeInLeft};
     animation-duration: 1.6s;
   }

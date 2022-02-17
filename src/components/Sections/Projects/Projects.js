@@ -11,7 +11,7 @@ const Projects = () => {
     <>
       <ProjectsSection id="projets">
         <SectionTitle>Portfolio</SectionTitle>
-        <p>Ci-dessous mes principales réalisations .</p>
+        <p>Ci-dessous mes principales réalisations.</p>
         <ProjectsContainer>
           <Project 
             name="Creator'Z"

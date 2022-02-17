@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 7777)
+      setDisplay(true), 8250)
   }, []);
 
   useEffect(() => {
@@ -31,10 +31,10 @@ const Home = () => {
           <Typewriter 
           onInit={(typewriter) => {
             typewriter
-            .typeString("Salut à toi jeune entrepreneur !")
+            .typeString("Salut à toi, Bretagne, ô pays que")
             .pauseFor(600)
-            .deleteChars(20)
-            .typeString("cher visiteu(se)r ! <br /> Bienvenue sur mon site &#128522;")
+            .deleteChars(22)
+            .typeString(" qui lis ces mots ! <br /> Bienvenue sur mon site &#128522;")
             .start();
           }}
           options={{

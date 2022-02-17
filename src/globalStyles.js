@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Open Sans', 'Roboto', sans-serif;
     color: #fff;
-    background: #000;
+    background: #0e0e0e;
   }
 `;
 
@@ -37,13 +37,13 @@ export const SectionTitle = withReveal(styled.h2`
   &:before {
     content: "";
     flex: 1;
-    background: linear-gradient(to right, #000, white);
+    background: linear-gradient(to right, #0E0E0E, white);
   }
   
   &:after {
     content: "";
     flex: 1;
-    background: linear-gradient(to left, #000, white);
+    background: linear-gradient(to left, #0E0E0E, white);
 	}
 
 `, <Zoom/>);

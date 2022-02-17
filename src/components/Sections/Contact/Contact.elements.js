@@ -53,36 +53,38 @@ export const Cv = styled.a`
   white-space: nowrap;
 
   &:hover {
-    background-color: rgba(255, 219, 122, 0.05);
+    background-color: rgba(255, 219, 122, 0.1);
   }
 `
 
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 3rem;
   width: 60%;
   max-width: 700px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
+    padding: 1rem;
     margin-top: 50px;
   }
 
   & > p {
     color: #b3b3b3;
+    margin-bottom: 1rem;
   }
 `;
 
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255 ,255 ,255, 0.2);
+  /* border: 1px solid rgba(255 ,255 ,255, 0.2); */
   border-radius: 5px;
-  padding: 3rem;
   margin-top: 33px;
 
   @media screen and (max-width: 768px) {
-    padding: 1rem;
+ 
     width: 80%;
     align-self: center;
   }

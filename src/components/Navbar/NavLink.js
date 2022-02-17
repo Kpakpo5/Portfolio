@@ -3,6 +3,7 @@ import { NavBarLink } from "./Navbar.elements";
 import { NavContext } from './Navbar';
 
 const NavLink = ({ navLinkId, text, path, setActiveNavLinkId }) => {
+  
   const activeNavLinkId = useContext(NavContext);
 
   const [decoration, setDecoration] = useState(false);
@@ -23,11 +24,11 @@ const NavLink = ({ navLinkId, text, path, setActiveNavLinkId }) => {
 
   return (
     <NavBarLink 
-    onClick={handleClick}
-    href={path}
-    activeNavLinkId={activeNavLinkId}
-    navLinkId={navLinkId}
-    decoration={decoration}
+      onClick={handleClick}
+      href={path}
+      activeNavLinkId={activeNavLinkId}
+      navLinkId={navLinkId}
+      decoration={decoration}
     >
       {text}
     </NavBarLink>

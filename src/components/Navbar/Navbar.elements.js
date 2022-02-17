@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   position: fixed;
   top : 0;
   left : 0;
-  background: #000;
+  background: #0E0E0E;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,7 +110,7 @@ export const NavMenu = styled.ul`
     left: ${({open}) => (open ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #000;
+    background: #0e0e0e;
   }
 `;
 
@@ -125,6 +125,7 @@ export const NavItem = styled.li`
 export const NavBarLink = styled.a`
   color: #fff;
   text-transform: uppercase;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 0.15em;
   display: flex;

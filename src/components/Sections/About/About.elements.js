@@ -136,7 +136,7 @@ export const PLink = styled.a`
     height: 1.1px;
     left: 50%;
     position: absolute;
-    background: #FFFF00;
+    background: #ffdb7a;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }

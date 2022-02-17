@@ -61,7 +61,7 @@ const Contact = () => {
             <Cv href={CV} download rel="noopener noreferrer" target="_blank">Curriculum Vitae</Cv>
           </CvContainer>
           <FormContainer>
-            <p>Vous souhaitez me contacter en vue d'une prochaine collaboration ou juste faire un coucou, vous pouvez le faire directement via le formulaire ci-dessous .</p>
+            <p>Vous souhaitez me contacter en vue d'une prochaine collaboration ou pour une autre raison, vous pouvez le faire directement via le formulaire ci-dessous.</p>
             <ContactForm onSubmit={sendMail}>
               <label htmlFor="name">Votre nom</label>
               <ContactInput

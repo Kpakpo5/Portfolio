@@ -1,5 +1,5 @@
 import GlobalStyle from './globalStyles';
-import { Navbar } from './components';
+import Navbar  from './components/Navbar/Navbar';
 import Sections from './components/Sections/Sections';
 import Home from './components/Sections/Home/Home';
 import About from './components/Sections/About/About';

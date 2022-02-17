@@ -131,7 +131,7 @@ export const ScrollInvite = styled.div`
     & > span {
     display: inline-block;
     margin-left: 15px;
-    animation: ${pointDown} 2s alternate infinite;
+    animation: ${pointDown} 1s alternate infinite;
     }
   }
 `;

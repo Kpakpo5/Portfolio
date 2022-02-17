@@ -13,7 +13,7 @@ import {
   SubmitButton,
   ValidateMessage
 } from "./Contact.elements";
-import CV from '../../../assets/akue_cv.pdf'
+import CV from '../../../assets/Cv_Kpakpo_Akue.pdf'
 
 const Contact = () => {
 

@@ -46,8 +46,8 @@ const Home = () => {
         { display &&
           <Intro>
             <h1>Moi c'est</h1>
-            <h2>Kpakpo Akue.</h2>
-            <h3>Je suis développeur Web.</h3>
+            <h2>Kpakpo Akue</h2>
+            <h3>développeur Web front-end.</h3>
             <p title="citation">" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
             { visibility &&
               <ScrollInvite>

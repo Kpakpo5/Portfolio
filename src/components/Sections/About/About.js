@@ -35,14 +35,14 @@ const About = () => {
                 Deux ans plus tard, de plus en plus attiré par l'univers de la programmation, et après une première initiation en autodidacte, je décide d'entamer un processus de reconversion dans le domaine. J'ai par la suite eu l'opportunité de suivre la formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink> où j'ai acquis de solides bases , notamment en Javascript et PHP, pour finalement passer et obtenir le titre professionnel.
               </p>
               <p>
-                Aujourd'hui je m'emploie à développer mes compétences et techniques via mes projets tout en continuant l'apprentissage d'outils de développement, notamment les technologies Front-End pour lesquelles j'ai un attrait particulier.
+                Aujourd'hui je m'emploie à développer mes compétences et techniques via mes projets, en particulier sur les technologies front-end et notamment React.js pour lequel j'ai un attrait particulier .
               </p>
             </Narrative>
           </Story>
           <Skills>
             <Vision>
-              <p>Une de mes lignes directrices est de m'appliquer à rendre mes réalisations intuitives dans le respect des standards d'accessibilité, tout cela sur la base d'un code lisible.</p>
-              <p>Voici une liste non exhaustive des langages et technologies que j'ai déjà utilisés:</p>
+              <p>Ma ligne directrice actuelle est de renforcer mon aptidude à produire du code de qualité tout en rendant mes réalisations intuitives et aussi accessibles que possible .</p>
+              <p>Ci-dessous une liste non exhaustive des langages et technologies dont je me sers :</p>
             </Vision>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
               <Techs>

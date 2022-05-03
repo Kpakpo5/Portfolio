@@ -46,7 +46,7 @@ export const SectionTitle = withReveal(styled.h2`
     background: linear-gradient(to left, #0E0E0E, white);
 	}
 
-`, <Zoom/>);
+`, <Zoom fraction={1}/>);
 
 
 

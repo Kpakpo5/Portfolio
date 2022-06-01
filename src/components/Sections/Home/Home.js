@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 8250)
+      setDisplay(true), 8500)
   }, []);
 
   useEffect(() => {
@@ -31,10 +31,11 @@ const Home = () => {
           <Typewriter 
           onInit={(typewriter) => {
             typewriter
-            .typeString("Salut à toi, Bretagne, ô pays que")
-            .pauseFor(600)
-            .deleteChars(22)
-            .typeString(" qui lis ces mots ! <br /> Bienvenue sur mon site &#128522;")
+            .typeString("&#192; toi qui lis ces mots,")
+            .pauseFor(300)
+            .typeString(" quelle que soit la raison de ta présence,")
+            .pauseFor(300)
+            .typeString(" bienvenue sur mon site &#128522;")
             .start();
           }}
           options={{
@@ -48,7 +49,10 @@ const Home = () => {
             <h1>Moi c'est</h1>
             <h2>Kpakpo Akue</h2>
             <h3>développeur Web front-end.</h3>
-            <p title="citation">" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
+            <p>Si mon nom te fait trébucher, n'aies crainte, je suis de tout coeur avec toi.<br />
+               La suite sera à ton aise, et je l'espère, t'en apprendra plus sur moi.<br/>
+            </p>
+            <span>&#128521;</span>
             { visibility &&
               <ScrollInvite>
                 <p><span>&#128071;</span></p>

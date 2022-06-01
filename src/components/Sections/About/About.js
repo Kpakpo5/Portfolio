@@ -42,7 +42,7 @@ const About = () => {
           <Skills>
             <Vision>
               <p>Ma ligne directrice actuelle est de renforcer mon aptidude à produire du code de qualité tout en rendant mes réalisations intuitives et aussi accessibles que possible .</p>
-              <p>Ci-dessous une liste non exhaustive des langages et technologies dont je me sers :</p>
+              <p>Ci-dessous une liste réduite des langages et technologies que j'utilise :</p>
             </Vision>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
               <Techs>

@@ -22,8 +22,9 @@ export const ProjectsSection = styled.section`
     width: 100%;
   }
 
-  & > p {
+  & > .react-reveal > p {
     margin-bottom: 2rem;
+    text-align: center;
   }
 `;
 
@@ -45,6 +46,10 @@ export const ProjectsContainer = styled.ul`
   }
   }
 `;
+
+export const ProjectIntro = withReveal(styled.p`
+  //
+`, <Fade left/>);
 
 export const ProjectTemplate = withReveal(styled.li`
   display: flex;

@@ -2,7 +2,7 @@
 import creatorz from '../../../assets/creatorz.png';
 import flag from '../../../assets/flag-memo.png';
 import { SectionTitle } from "../../../globalStyles";
-import { ProjectsSection, ProjectsContainer } from "./Projects.elements";
+import { ProjectsSection, ProjectsContainer, ProjectIntro } from "./Projects.elements";
 import Project, {ImagelessProject} from './Project';
 
 const Projects = () => {
@@ -11,7 +11,7 @@ const Projects = () => {
     <>
       <ProjectsSection id="projets">
         <SectionTitle>Portfolio</SectionTitle>
-        <p>Voici mes principales réalisations</p>
+        <ProjectIntro>Voici mes principales réalisations</ProjectIntro>
         <ProjectsContainer>
           <Project 
             name="Creator'Z"

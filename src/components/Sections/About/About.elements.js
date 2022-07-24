@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import withReveal from "react-reveal/withReveal";
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom'
+
+
 
 export const AboutSection = styled.section`
   display: flex;
@@ -62,18 +65,22 @@ export const Skills = withReveal(styled.div`
   margin-top: 50px;
 `, <Fade bottom/>);
 
+export const Phrase = withReveal(styled.p`
+  //
+`, <Fade bottom/>);
+
 export const Techs = styled.ul`
   display: flex;
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
 
-  & > li {
+  & > .react-reveal {
     margin: 1rem;
   }
 `;
 
-export const Tech = styled.li`
+export const Tech = withReveal(styled.li`
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -87,7 +94,7 @@ export const Tech = styled.li`
     width: 33vw;
     height: 22vw;
   }
-`;
+`, <Zoom/>);
 
 export const TechIcon = styled.div`
   background-color: white;
@@ -117,7 +124,8 @@ export const Vision = styled.div`
   font-size: 1rem;
   margin-bottom: 3rem;
 
-  & > p {
+  & > * {
+    text-align: center;
     margin-bottom: 1rem;
     color: #bfbfbf;
   }

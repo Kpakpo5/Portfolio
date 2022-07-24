@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 8500)
+      setDisplay(true), 8200)
   }, []);
 
   useEffect(() => {
@@ -31,11 +31,11 @@ const Home = () => {
           <Typewriter 
           onInit={(typewriter) => {
             typewriter
-            .typeString("&#192; toi qui lis ces mots,")
+            .typeString('&Agrave; toi qui lis ces mots,')
+            .pauseFor(200)
+            .typeString(' merci pour ta présence ici. <br />')
             .pauseFor(300)
-            .typeString(" quelle que soit la raison de ta présence,")
-            .pauseFor(300)
-            .typeString(" bienvenue sur mon site &#128522;")
+            .typeString(' Bienvenue sur mon site personnel &#128522;')
             .start();
           }}
           options={{
@@ -49,8 +49,8 @@ const Home = () => {
             <h1>Moi c'est</h1>
             <h2>Kpakpo Akue</h2>
             <h3>développeur Web front-end.</h3>
-            <p>Si mon nom te fait trébucher, n'aies crainte, je suis de tout coeur avec toi.<br />
-               La suite sera à ton aise, et je l'espère, t'en apprendra plus sur moi.<br/>
+            <p>Sur ce site, tu auras un aperçu de mon parcours et de mes réalisations.<br />
+               Scrolles vers le bas pour en apprendre plus sur moi. Bonne visite !<br/>
             </p>
             <span>&#128521;</span>
             { visibility &&

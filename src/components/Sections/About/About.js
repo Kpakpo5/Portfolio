@@ -1,11 +1,12 @@
 import { IconContext } from 'react-icons/lib';
-import { SiPhp, SiStyledcomponents, SiNextdotjs, SiReact, SiJavascript, SiRedux, SiMysql } from 'react-icons/si';
+import { SiPhp, SiStyledcomponents, SiNextdotjs, SiReact, SiJavascript, SiRedux, SiMysql, SiTailwindcss } from 'react-icons/si';
 import { SectionTitle } from "../../../globalStyles";
 import {
   AboutSection,
   AboutContent,
   Story,
   Picture,
+  Phrase,
   Narrative,
   Skills,
   PLink,
@@ -28,21 +29,21 @@ const About = () => {
               <img src={Me} alt="dessin" />
             </Picture>
             <Narrative>
-              <p>
-              &Agrave; la fin de mes études d'Histoire en 2016, piqué par la curiosité, je décide (enfin!) de m'intéresser aux coulisses du Web après avoir l'avoir parcouru pendant des années. Les recherches effectuées m'ont plongé et perdu dans l'immense diversité des langages, technologies et outils servant à la réalisation de sites internet. Ce fut ma première rencontre avec le développement Web.
-              </p>
-              <p>
-                Deux ans plus tard, de plus en plus attiré par l'univers de la programmation, et après une première initiation en autodidacte, je décide d'entamer un processus de reconversion dans le domaine. J'ai par la suite eu l'opportunité de suivre la formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink> où j'ai acquis de solides bases , notamment en Javascript et PHP, pour finalement passer et obtenir le titre professionnel.
-              </p>
-              <p>
-                Aujourd'hui je m'emploie à développer mes compétences et techniques via mes projets, en particulier sur les technologies front-end et notamment React.js pour lequel j'ai un attrait particulier .
-              </p>
+              <Phrase>
+                Pendant mes études universitaires en Histoire, j'étais à mille lieues de m'imaginer écrire des lignes de code quelques années plus tard. C'est lors de recherches internet effectuées dans le cadre de mon mémoire que j'eus un aperçu de la réalisation d'une page Web; cherchant à améliorer l'affichage d'un site, j'ouvris par hasard les outils de développement du navigateur, dévoilant le code Html et Css de la page. D'un naturel curieux, je cherchai evidemment à en savoir plus. Au cours des mois qui suivirent et au fil de mes découvertes, la curiosité fit place à la fascination et celle-ci déboucha sur une passion grandissante pour le développement Web.
+              </Phrase><br />
+              <Phrase>
+                Après un apprentissage en autodidacte plus ou moins laborieux, j'entamai un processus de reconversion un peu plus cadré qui m'amena notamment à effectuer une formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>; ce qui me permit d'acquérir de solides bases techniques et pratiques en Javascript et PHP, pour ensuite passer et obtenir le titre professionnel.
+              </Phrase><br />
+              <Phrase>
+                Aujourd'hui je poursuis le développement de mes compétences et techniques via mes projets, en particulier sur les technologies appartenant à l'écosystème Javascript, et je m'emploie aussi à affiner ma sensibilité design.
+              </Phrase>
             </Narrative>
           </Story>
           <Skills>
             <Vision>
-              <p>Ma ligne directrice actuelle est de renforcer mon aptidude à produire du code de qualité tout en rendant mes réalisations intuitives et aussi accessibles que possible .</p>
-              <p>Ci-dessous une liste réduite des langages et technologies que j'utilise :</p>
+              <Phrase>Avec pour ambition de devenir un développeur accompli à moyen terme, je m'informe et reste ouvert à l'apprentissage de nouvelles technologies que j'ajoute au fur et à mesure à mon arc de compétences.</Phrase>
+              <Phrase>Ci-dessous une liste réduite des langages et technologies dont je me suis déjà servi :</Phrase>
             </Vision>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
               <Techs>
@@ -61,6 +62,10 @@ const About = () => {
                 <Tech>
                   <TechIcon><SiStyledcomponents /></TechIcon>
                   <TechName>Styled Components</TechName>
+                </Tech>
+                <Tech>
+                  <TechIcon><SiTailwindcss /></TechIcon>
+                  <TechName>TailwindCss</TechName>
                 </Tech>
                 <Tech>
                   <TechIcon><SiNextdotjs /></TechIcon>

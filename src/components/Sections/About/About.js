@@ -30,20 +30,20 @@ const About = () => {
             </Picture>
             <Narrative>
               <Phrase>
-                Pendant mes études universitaires en Histoire, j'étais à mille lieues de m'imaginer écrire des lignes de code quelques années plus tard. C'est lors de recherches internet effectuées dans le cadre de mon mémoire que j'eus un aperçu de la réalisation d'une page Web; cherchant à améliorer l'affichage d'un site, j'ouvris par hasard les outils de développement du navigateur, dévoilant le code Html et Css de la page. D'un naturel curieux, je cherchai evidemment à en savoir plus. Au cours des mois qui suivirent et au fil de mes découvertes, la curiosité fit place à la fascination et celle-ci déboucha sur une passion grandissante pour le développement Web.
+               &Agrave; mille lieues, à l'époque, de m'imaginer envisager sérieusement une reconversion dans le domaine, c'est à la fin de mes études d'Histoire qu'eût lieu ma première rencontre avec le développement Web. Cherchant un moyen d'améliorer l'affichage d'une page Web, je dévoilai son code Html et Css en ouvrant au hasard les outils de développement du navigateur. Au cours des mois qui suivirent et au fil de mes recherches sur le sujet, la curiosité suscitée par ma découverte se mua en un intérêt certain qui, à son tour, déboucha sur une fascination grandissante, portant au passage un sérieux coup à mon projet professionnel en cours.
               </Phrase><br />
               <Phrase>
-                Après un apprentissage en autodidacte plus ou moins laborieux, j'entamai un processus de reconversion un peu plus cadré qui m'amena notamment à effectuer une formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>; ce qui me permit d'acquérir de solides bases techniques et pratiques en Javascript et PHP, pour ensuite passer et obtenir le titre professionnel.
+                Après un apprentissage en autodidacte plus ou moins laborieux dont je vous passe les détails, je décidai de me jeter à l'eau en entamant un processus de reconversion un peu plus encadré, qui m'amena notamment à effectuer une formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>. Cela me permit d'acquérir de solides bases en Javascript ( avec un apprentissage plus poussé du framework React ) et Php, que je validai ensuite en obtenant le titre professionnel.
               </Phrase><br />
               <Phrase>
-                Aujourd'hui je poursuis le développement de mes compétences et techniques via mes projets, en particulier sur les technologies appartenant à l'écosystème Javascript, et je m'emploie aussi à affiner ma sensibilité design.
+                Aujourd'hui je continue de grandir en développant mes compétences techniques via mes projets, en particulier sur les technologies appartenant à l'univers Javascript, avec un attrait affiché pour l'écosystème React.
               </Phrase>
             </Narrative>
           </Story>
           <Skills>
             <Vision>
-              <Phrase>Avec pour ambition de devenir un développeur accompli à moyen terme, je m'informe et reste ouvert à l'apprentissage de nouvelles technologies que j'ajoute au fur et à mesure à mon arc de compétences.</Phrase>
-              <Phrase>Ci-dessous une liste réduite des langages et technologies dont je me suis déjà servi :</Phrase>
+              <Phrase>Ayant pour ambition de devenir un développeur totalement accompli à moyen terme, je m'informe et reste ouvert à l'apprentissage de nouvelles technologies pertinentes que je m'emploie à ajouter au fur et à mesure à mon arc de compétences.</Phrase>
+              <Phrase>Ci-dessous un aperçu des langages et outils avec lesquels je travaille :</Phrase>
             </Vision>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
               <Techs>

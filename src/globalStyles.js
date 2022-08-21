@@ -6,13 +6,19 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
   }
+
+
+  body {
+    color: #fff;
+    background: #0e0e0e;
+  }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', 'Roboto', sans-serif;
-    color: #fff;
-    background: #0e0e0e;
+    /* color: #fff;
+    background: #0e0e0e; */
   }
 `;
 

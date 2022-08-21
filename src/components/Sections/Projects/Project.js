@@ -1,20 +1,17 @@
 import { useState } from 'react';
+import Modal from './Modal';
 import {
   ProjectTemplate,
-  ProjectSmallTemplate,
-  Infos,
-  LinkContainer,
-  SingleLink,
   ProjectName,
-  ProjectDescription,
-  ProjectTools,
   ImageContainer,
   ProjectImage,
-  ProjectLinks,
+  ProjectInfosContainer,
   ProjectLink,
   ProjectMobileLinks,
-  ProjectMobileLink
+  ProjectMobileLink,
+  OpenModalButton
 } from "./Projects.elements";
+
 
 const Project = ({
   name,
@@ -23,8 +20,12 @@ const Project = ({
   image,
   linkName,
   source,
-  repository
+  repository,
+  context,
+  execution
 }) => {
+
+  const [modalIsOpen, setModalIsopen] = useState(false);
 
   const [display, setDisplay] = useState(false);
 
@@ -36,47 +37,53 @@ const Project = ({
     setDisplay(false);
   }
 
+
+  const HideModal = () => {
+    setModalIsopen(false);
+    document.body.style.overflow = 'unset';
+  }
+
+
+  const showModal = () => { 
+    setModalIsopen(true)
+
+    if (typeof window != 'undefined' && window.document) {
+        document.body.style.overflow = 'hidden';
+    }
+  }
   return (
     <ProjectTemplate>
       <ProjectName>{name}</ProjectName>
-      <ProjectDescription>{description}</ProjectDescription>
-      <ProjectTools>{tools}</ProjectTools>
       <ImageContainer onMouseEnter={handleonMouseEnter} onMouseLeave={handleonMouseLeave}>
         <ProjectImage src={image}/>
           { display &&
-            <ProjectLinks>
-              <ProjectLink href={repository} target="_blank">Dépôt Github</ProjectLink>
-              <ProjectLink href={source} target="_blank">{linkName}</ProjectLink>
-            </ProjectLinks>
+            <ProjectInfosContainer>
+              <OpenModalButton onClick={() => showModal()}>Infos</OpenModalButton>
+              { linkName && <ProjectLink href={source} target="_blank">{linkName}</ProjectLink> }
+            </ProjectInfosContainer>
           }
       </ImageContainer>
       <ProjectMobileLinks>
-        <ProjectMobileLink href={repository} target="_blank">Dépôt Github</ProjectMobileLink>
-        <ProjectMobileLink href={source} target="_blank">{linkName}</ProjectMobileLink>
+        <ProjectMobileLink onClick={() => showModal()}>Infos</ProjectMobileLink>
+        { linkName && <ProjectMobileLink href={source} target="_blank">{linkName}</ProjectMobileLink> }
       </ProjectMobileLinks>
+      <Modal
+        modalIsOpen={modalIsOpen}
+        closeModal={() => HideModal()}
+        name={name}
+        image={image}
+        linkName={linkName}
+        description={description}
+        context={context}
+        execution={execution}
+        tools={tools}
+        source={source}
+        repository={repository}
+      />
     </ProjectTemplate>
   );
   }
-
-export const ImagelessProject =({
-  name,
-  description,
-  tools,
-  repository
-}) => {
-  return (
-    <ProjectSmallTemplate>
-      <Infos>
-        <ProjectName>{name}</ProjectName>
-        <ProjectDescription>{description}</ProjectDescription>
-        <ProjectTools>{tools}</ProjectTools>
-      </Infos>
-      <LinkContainer>
-        <SingleLink href={repository} target="_blank">Dépôt Github</SingleLink>
-      </LinkContainer>
-    </ProjectSmallTemplate>
-    )
-}
+  
 
 
 export default Project;

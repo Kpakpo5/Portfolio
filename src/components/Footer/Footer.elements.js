@@ -31,6 +31,7 @@ export const SocialItem = styled.li`
 export const SocialIcon = styled.a`
   font-size: 2rem;
   margin: 0 10px;
+  color: white;
 `;
 
 export const Notice = styled.div`

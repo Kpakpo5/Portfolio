@@ -58,7 +58,7 @@ export const HomeSection = styled.section`
 export const Greet = styled.div`
   color: white;
   font-size: 33px;
-  background-color: white;
+  color: white;
   @media screen and (max-width: 480px) {
     font-size: 22px;
   }
@@ -110,17 +110,17 @@ export const Intro = styled.div`
     border-bottom: 1px solid rgba(255 ,255 ,255, 0.4);
     border-left: 1px solid rgba(255 ,255 ,255, 0.4);
     }
-    &::after{
+    
+    &:after{
       content:""; 
       border-left:10px solid transparent;
       border-right:10px solid transparent;
       border-top: 10px solid rgba(255 ,255 ,255, 0.4);
       position: absolute;
     }
-
-
     
   }
+
   & > span {
       margin-top : 6px;
       font-size: 2rem;
@@ -129,7 +129,7 @@ export const Intro = styled.div`
     }
 `;
 
-export const ScrollInvite = styled.div`
+export const ScrollInvitation = styled.div`
   position: fixed;
   background-color: transparent;
   left: 50%;

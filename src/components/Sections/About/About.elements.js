@@ -29,7 +29,7 @@ export const Narrative = styled.div`
     margin-top: 44px;
   }
 
-  & > p {
+  & > div {
     color:#bfbfbf;
     margin-bottom: 10px;
   }

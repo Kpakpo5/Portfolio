@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { HomeSection, Greet, Intro, ScrollInvite } from './Home.elements';
+import { HomeSection, Greet, Intro, ScrollInvitation } from './Home.elements';
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
@@ -31,32 +31,35 @@ const Home = () => {
           <Typewriter 
           onInit={(typewriter) => {
             typewriter
-            .typeString('&Agrave; toi qui lis ces mots,')
-            .pauseFor(200)
+            .typeString('Toi,')
+            .pauseFor(400)
+            .typeString(' qui lis ces mots,')
+            .pauseFor(400)
             .typeString(' merci pour ta présence ici. <br />')
-            .pauseFor(300)
-            .typeString(' Bienvenue sur mon site personnel &#128522;')
+            .pauseFor(400)
+            .typeString(' Bienvenue sur mon site personnel :)')
             .start();
           }}
           options={{
             delay: 60,
             deleteSpeed: 30,
+            wrapperClassName:"wrapper"
           }}
           />
         </Greet>
         { display &&
           <Intro>
             <h1>Moi c'est</h1>
-            <h2>Kpakpo Akue</h2>
+            <h2>Kpakpo AKUE</h2>
             <h3>développeur Web front-end.</h3>
-            <p>Sur ce site, tu auras un aperçu de mon parcours et de mes réalisations.<br />
-               Scrolles vers le bas pour en apprendre plus sur moi. Bonne visite !<br/>
+            <p>Ce site vise à mettre en lumière mon parcours et mes réalisations.<br />
+              Scrolles vers le bas pour en apprendre plus sur moi. Bonne visite !<br/>
             </p>
             <span>&#128521;</span>
             { visibility &&
-              <ScrollInvite>
+              <ScrollInvitation>
                 <p><span>&#128071;</span></p>
-              </ScrollInvite>
+              </ScrollInvitation>
             }
           </Intro>
         }

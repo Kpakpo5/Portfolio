@@ -32,10 +32,14 @@ export const ProjectsContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 600px;
 
   @media screen and (max-width: 768px) {
-    width: 99%;
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 98%;
   }
 
   & > .react-reveal {
@@ -60,90 +64,55 @@ export const ProjectTemplate = withReveal(styled.li`
   @media screen and (max-width: 768px) {
     margin-bottom: 44px;
   }
+
 `, <Fade bottom/>);
 
-export const ProjectSmallTemplate = withReveal(styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border: solid 1px rgba(255 ,255 ,255, 0.2);
-  border-radius: 3px;
-  padding: 10px;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: start;
-  }
-`, <Fade bottom/>);
-
-export const Infos = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
-
-  & > * {
-    width: 100%;
-  }
-
-`;
-
-export const LinkContainer = styled.div`
-  width: 30%;
-  background: transparent;
-
-  @media screen and (max-width: 768px) {
-    width: 50%;
-    margin-top: 5px;
-  }
-`;
-
-export const SingleLink = styled.a`
-  display: flex;
-  align-items: center;
-  height: 40px;
-  justify-content: center;
-  border-radius: 4px;
-  background-color: rgba(255 ,255 ,255, 0.1);
-  font-size : 0.9rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-
-  @media screen and (max-width: 768px) {
-    width: 44vw;
-    margin-top: 5px;
-  }
-
-  &:hover {
-    background-color: rgba(255 ,255 ,255, 0.4);
-  }
-`
 
 export const ProjectName = styled.h3`
   font-size: 20px;
   color: #FFCC45;
+  text-align: center;
+  margin-bottom: 8px;
 `;
 
-export const ProjectMobileLinks = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  bottom: -44px;
-  left: 0;
-  width: 100%;
-  height: 40px;
 
-  @media screen and (min-width: 769px) {
-    display: none;
+
+export const ProjectLink = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  background: transparent;
+  border: 3px solid black;
+  
+  &:hover{
+    color: white;
+    background: black;
   }
 `;
+
+export const OpenModalButton = styled.button`
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  background: transparent;
+  border: 3px solid black;
+  
+  &:hover{
+    color: white;
+    background: black;
+  }
+`;
+
+
 
 export const ProjectMobileLink = styled.a`
   display: flex;
@@ -163,14 +132,40 @@ export const ProjectMobileLink = styled.a`
   }
 `;
 
-export const ProjectDescription = styled.p`
-  margin-bottom: 5px;
-  color: #bfbfbf;
+export const ProjectMobileLinks = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: transparent;
+  bottom: -44px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
 `;
 
-export const ProjectTools = styled.small`
-  letter-spacing: .05rem;
-`;
+export const MobileOpenModalButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: rgba(255 ,255 ,255, 0.1);
+  font-size : 0.9rem;
+  font-weight: bold;
+  width: 49.5%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(255 ,255 ,255, 0.4);
+  }
+`
+
 
 export const ImageContainer = styled.div`
   position: relative;
@@ -179,7 +174,7 @@ export const ImageContainer = styled.div`
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
-    height: 50vw;
+    height: 44vw;
   }
 `;
 
@@ -191,7 +186,7 @@ export const ProjectImage = styled.img`
   object-fit: cover;
 `;
 
-export const ProjectLinks = styled.div`
+export const ProjectInfosContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -210,19 +205,4 @@ export const ProjectLinks = styled.div`
   }
 `;
 
-export const ProjectLink = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  background: transparent;
-  border: 3px solid black;
-  
-  &:hover{
-    color: white;
-    background: black;
-  }
-`;
+

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { HomeSection, Greet, Intro, ScrollInvite } from './Home.elements';
+import { HomeSection, Greet, Intro, ScrollInvitation } from './Home.elements';
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 8250)
+      setDisplay(true), 8200)
   }, []);
 
   useEffect(() => {
@@ -31,28 +31,35 @@ const Home = () => {
           <Typewriter 
           onInit={(typewriter) => {
             typewriter
-            .typeString("Salut à toi, Bretagne, ô pays que")
-            .pauseFor(600)
-            .deleteChars(22)
-            .typeString(" qui lis ces mots ! <br /> Bienvenue sur mon site &#128522;")
+            .typeString('Toi,')
+            .pauseFor(400)
+            .typeString(' qui lis ces mots,')
+            .pauseFor(400)
+            .typeString(' merci pour ta présence ici. <br />')
+            .pauseFor(400)
+            .typeString(' Bienvenue sur mon site personnel :)')
             .start();
           }}
           options={{
             delay: 60,
             deleteSpeed: 30,
+            wrapperClassName:"wrapper"
           }}
           />
         </Greet>
         { display &&
           <Intro>
             <h1>Moi c'est</h1>
-            <h2>Kpakpo Akue</h2>
+            <h2>Kpakpo AKUE</h2>
             <h3>développeur Web front-end.</h3>
-            <p title="citation">" First do it, then do it right, then do it better "<br /><span>Addy Osmani</span></p>
+            <p>Ce site vise à mettre en lumière mon parcours et mes réalisations.<br />
+              Scrolles vers le bas pour en apprendre plus sur moi. Bonne visite !<br/>
+            </p>
+            <span>&#128521;</span>
             { visibility &&
-              <ScrollInvite>
+              <ScrollInvitation>
                 <p><span>&#128071;</span></p>
-              </ScrollInvite>
+              </ScrollInvitation>
             }
           </Intro>
         }

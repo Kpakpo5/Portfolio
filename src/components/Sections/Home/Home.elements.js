@@ -58,7 +58,7 @@ export const HomeSection = styled.section`
 export const Greet = styled.div`
   color: white;
   font-size: 33px;
-  background-color: white;
+  color: white;
   @media screen and (max-width: 480px) {
     font-size: 22px;
   }
@@ -73,6 +73,9 @@ export const Intro = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 55px;
+  @media screen and (max-width: 480px) {
+    margin-top: 40px;
+  }
 
   & > h1 {
     font-size: 1rem;
@@ -96,20 +99,37 @@ export const Intro = styled.div`
   
   & > p {
     margin-top: 50px;
-    font-size: 1.2rem;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 1.1rem;
     font-style: italic;
-    font-weight: bold;
     animation-name: ${fadeUp};
     animation-duration: 1.8s;
-    & > span {
-      font-size: .8rem;
+    @media screen and (max-width: 480px) {
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(255 ,255 ,255, 0.4);
+    border-left: 1px solid rgba(255 ,255 ,255, 0.4);
+    }
+    
+    &:after{
+      content:""; 
+      border-left:10px solid transparent;
+      border-right:10px solid transparent;
+      border-top: 10px solid rgba(255 ,255 ,255, 0.4);
+      position: absolute;
+    }
+    
+  }
+
+  & > span {
+      margin-top : 6px;
+      font-size: 2rem;
       font-style: normal;
       font-weight: normal;
     }
-  }
 `;
 
-export const ScrollInvite = styled.div`
+export const ScrollInvitation = styled.div`
   position: fixed;
   background-color: transparent;
   left: 50%;

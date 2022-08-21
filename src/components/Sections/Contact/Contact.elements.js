@@ -14,25 +14,34 @@ export const ContactSection = styled.section`
 `;
 
 export const SectionContent = withReveal(styled.div`
-  display: flex;
+  
   max-width: 1000px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: auto auto;
 
   @media screen and (max-width: 768px) {
+    display: flex;
     flex-direction: column;
   }
+
+  & > div {
+    padding: 1rem;
+  }
+
 `, <Fade bottom/>);
 
 export const CvContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
-  width: 30%;
+  width: auto;
 
   & > p {
     color: #b3b3b3;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    width: auto;
   }
 
   @media screen and (max-width: 768px) {
@@ -41,6 +50,7 @@ export const CvContainer = styled.div`
     justify-content: center;
   }
 `;
+
 
 export const Cv = styled.a`
   text-decoration: none;
@@ -54,6 +64,38 @@ export const Cv = styled.a`
 
   &:hover {
     background-color: rgba(255, 219, 122, 0.1);
+  }
+`
+
+
+export const EmailLinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > p {
+    color: #bfbfbf;
+  }
+`
+
+export const EmailLink = styled.a`
+  color : #ffdb7a;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+`;
+
+
+export const Availability = styled.div`
+  margin-bottom: 2rem;
+
+  & > p {
+    padding: 8px;
+    text-align: center;
+    color: #bfbfbf;
   }
 `
 

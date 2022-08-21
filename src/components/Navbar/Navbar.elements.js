@@ -5,7 +5,8 @@ import { Container } from '../../globalStyles';
 
 const animateNav = keyframes`
   0% {
-    top: -100px;
+    opacity: 0;
+    
   }
   100% {
     top: 0;

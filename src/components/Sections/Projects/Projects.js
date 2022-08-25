@@ -21,8 +21,8 @@ const Projects = () => {
             tools="React, Redux, Axios"
             image={creatorz}
             linkName= "Démo live"
-            context="Réalisé en équipe avec des étudiants O'Clock, ce projet de fin de formation vient sanctionner plusieurs mois d'apperntissage intense du développement Web ."
-            execution="Le développement, programmé sur un mois, m'a non seulement permis de mettre en pratique les concepts appris en formation dans le cadre d'un projet pertinent mais aussi d'améliorer mes compétences en matière de comnunication et de travail en équipe ."
+            context="Réalisé en équipe avec des étudiants O'Clock, ce projet de fin de formation est venu sanctionner plusieurs mois d'apprentissage intense du développement Web ."
+            execution="Le développement, programmé sur un mois, m'a non seulement permis de mettre en pratique les connaissances acquises en formation dans le cadre d'un projet pertinent, mais aussi d'améliorer mes compétences en matière de comnunication et de travail en équipe ."
             source=" https://youtu.be/TIXGltXg4yY?t=1524"
             repository="https://github.com/Kpakpo5/Creatorz"
           />
@@ -48,11 +48,11 @@ const Projects = () => {
           />
           <Project 
             name="Redux-Movies"
-            description= "App démo Redux-toolkit"
-            tools="React, Tailwind.css, Redux-toolkit"
+            description= "App démo Redux Toolkit"
+            tools="React, Tailwind.css, Redux Toolkit"
             image={movies}
-            context="Né de ma volonté de retravailler mes techniques et mettre à jour mes compétences sur Redux, l'essentiel de la logique de l'application devait être géré par l'outil de gestion d'état ."
-            execution="J'ai pris beaucoup de plaisir à réaliser cette petite application qui m'a renoué avec certains concepts de Redux et m'en a fait découvrir quelques nouveaux. J'ai aussi probablement trouvé mon framework Css préféré avec Tailwind.css."
+            context="Né de la volonté de retravailler mes techniques et mettre à jour mes compétences sur Redux, l'essentiel de la logique de l'application devait être géré par l'outil de gestion d'état ."
+            execution="J'ai pris beaucoup de plaisir à réaliser cette petite application qui m'a renoué avec certains procédés de Redux et m'en a fait découvrir d'autres, plus pratiques, avec Redux Toolkit ."
             repository="https://github.com/Kpakpo5/Redux-Movies"
           />
           

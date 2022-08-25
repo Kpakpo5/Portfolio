@@ -42,7 +42,7 @@ const About = () => {
           </Story>
           <Skills>
             <Vision>
-              <Phrase>Ayant pour ambition de devenir un développeur totalement accompli à moyen terme, je m'informe et reste ouvert à l'apprentissage de nouvelles technologies pertinentes que je m'emploie à ajouter au fur et à mesure à mon arc de compétences.</Phrase>
+              <Phrase>Avec l'ambition de devenir un développeur totalement accompli à moyen terme, je m'informe et reste ouvert à l'apprentissage de nouvelles technologies pertinentes que je m'emploie à ajouter au fur et à mesure à mon arc de compétences.</Phrase>
               <Phrase>Ci-dessous un aperçu des langages et outils avec lesquels je travaille :</Phrase>
             </Vision>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>

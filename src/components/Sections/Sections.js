@@ -22,7 +22,8 @@ const Sections = styled.div`
     padding: 99px 0;
 
     @media screen and (max-width: 768px) {
-      padding: 44px 0;
+      padding: 40px 0;
+      margin-bottom: 50px;
   }
   }
   

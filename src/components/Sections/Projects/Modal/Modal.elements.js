@@ -57,8 +57,8 @@ export const ModalBody = styled.div`
     position : fixed;
     left: 15vw;
     right: 10vw;
-    top : 5vh;
-    bottom: 5vh;
+    top : 10vh;
+    bottom: 10vh;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -82,10 +82,20 @@ export const ModalBody = styled.div`
         position : absolute;
         right: 0.8rem;
         top: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 1.5rem;
         border: none;
         background: transparent;
         cursor: pointer;
+
+        & > span {
+            font-size: 0.8rem;
+            margin-right: 5px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
     }
 `;
 
@@ -106,7 +116,7 @@ export const ModalHeader = styled.div`
         border-bottom: 2px solid black;
         padding: 0;
         padding-bottom: 1rem;
-        margin-top: 2.5rem;
+        margin-top: 3rem;
     }
 
 `;

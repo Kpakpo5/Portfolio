@@ -147,6 +147,10 @@ export const NavBarLink = styled.a`
     background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: ${({decoration}) => (decoration ? '100%' : 0)};
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &:hover:after {
@@ -161,7 +165,7 @@ export const NavBarLink = styled.a`
     display: table;
 
     &:hover {
-      color: #4b59f7;
+      color: #FFCC45;
       transition: all 0.3s ease;
     }
   }

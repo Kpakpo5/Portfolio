@@ -1,4 +1,5 @@
 import ReactDOM  from "react-dom";
+import {useEffect} from 'react';
 import { RiCloseCircleFill} from 'react-icons/ri';
 import {
     ModalOverlay,
@@ -30,15 +31,20 @@ const Modal = ({
     repository
 
 }) => {
-    console.log(linkName);
 
-    if(!modalIsOpen) return null;
+    useEffect(() => {
+        if(modalIsOpen) {
+            window.onpopstate = () => closeModal();
+        }
+    });
 
+    
     return ReactDOM.createPortal(
-        <>
+       (modalIsOpen && 
+       <>
             <ModalOverlay />
             <ModalBody>
-                <button onClick={closeModal}><RiCloseCircleFill /></button>
+                <button onClick={closeModal}><span>Fermer</span><RiCloseCircleFill /></button>
                 <ModalHeader>
                     <ProjectHeading>
                         <ProjectPicture src={image}/>
@@ -66,7 +72,7 @@ const Modal = ({
                     </ProjectDetails>
                 </ModalMain>
             </ModalBody>
-        </>,
+        </>),
         document.getElementById("project-portal")
     );
 }

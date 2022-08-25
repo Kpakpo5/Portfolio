@@ -32,7 +32,7 @@ export const ProjectsContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 700px;
 
   @media screen and (max-width: 768px) {
     width: 80%;

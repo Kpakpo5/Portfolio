@@ -51,6 +51,7 @@ const Project = ({
         document.body.style.overflow = 'hidden';
     }
   }
+
   return (
     <ProjectTemplate>
       <ProjectName>{name}</ProjectName>

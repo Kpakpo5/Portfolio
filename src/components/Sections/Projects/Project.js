@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Modal from './Modal';
+import Modal from './Modal/ProjectModal';
 import {
   ProjectTemplate,
   ProjectName,
@@ -10,7 +10,7 @@ import {
   ProjectMobileLinks,
   ProjectMobileLink,
   OpenModalButton
-} from "./Projects.elements";
+} from "./Project.components";
 
 
 const Project = ({

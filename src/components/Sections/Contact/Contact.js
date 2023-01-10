@@ -1,14 +1,19 @@
 import {MdEmail} from 'react-icons/md';
+import { FaLinkedin, FaGithubSquare } from 'react-icons/fa';
 import { SectionTitle } from "../../../globalStyles";
 import {
   ContactSection,
+  ContentWrapper,
   SectionContent,
   CvContainer,
   Cv,
   EmailLinkContainer,
   EmailLink,
-  Availability
-} from "./Contact.elements";
+  Availability,
+  SocialIcons,
+  SocialIcon,
+  SocialLink
+} from "./Contact.components";
 
 import CV from '../../../assets/Cv_Kpakpo_Akue.pdf'
 
@@ -19,23 +24,36 @@ const Contact = () => {
     <>
       <ContactSection id="contact">
         <SectionTitle>Contact</SectionTitle>
-        <SectionContent>
-          <Availability>
-            <p>Actuellement, je suis à la recherche d'un contrat d'alternance qui me permettra de passer à l'étape suivante de ma reconversion, valoriser mes compétences et gagner de l'expérience dans un contexte professionnel .</p>
-            <p>Pour toute proposition de collaboration, j'ai hâte d'échanger avec vous . </p>
-          </Availability>
-          <div></div>
-          <EmailLinkContainer>
-            <p>Contactez-moi !</p> 
-            <EmailLink href="mailto:kpakpo.akue5@gmail.com">
-              <MdEmail style={{fontSize: '6rem'}}/>
-            </EmailLink>
-          </EmailLinkContainer>
-          <CvContainer>
-            <p>CV à télécharger</p>
-            <Cv href={CV} download rel="noopener noreferrer" target="_blank">Curriculum Vitae</Cv>
-          </CvContainer>
-        </SectionContent>
+        <ContentWrapper>
+          <SectionContent>
+            <Availability>
+              <p>Actuellement, je cherche une opportunité de travail (alternance comprise) afin me consacrer pleinement à ma passion. C'est la dernière étape de ma reconversion, celle qui me permettra de mettre en valeur mes compétences et poursuivre ma progression dans un contexte professionnel .</p>
+              <p>Pour toute proposition de collaboration, j'ai hâte d'échanger avec vous . </p>
+            </Availability>
+            <EmailLinkContainer>
+              <p>Contactez-moi !</p> 
+              <EmailLink href="mailto:kpakpo.akue5@gmail.com">
+                <MdEmail style={{fontSize: '6rem'}}/>
+              </EmailLink>
+            </EmailLinkContainer>
+            <CvContainer>
+              <p>CV à télécharger</p>
+              <Cv href={CV} download rel="noopener noreferrer" target="_blank">Curriculum Vitae</Cv>
+            </CvContainer>
+            <SocialIcons>
+              <SocialIcon>
+                <SocialLink href="https://www.linkedin.com/in/kpakpo-akue/" target="_blank">
+                  <FaLinkedin />
+                </SocialLink>
+              </SocialIcon>
+              <SocialIcon>
+                <SocialLink href="https://github.com/Kpakpo5" target="_blank">
+                  <FaGithubSquare />
+                </SocialLink>
+              </SocialIcon>
+            </SocialIcons>
+          </SectionContent>
+        </ContentWrapper>
       </ContactSection>
     </>
   );

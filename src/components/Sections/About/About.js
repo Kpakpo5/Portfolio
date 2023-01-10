@@ -6,16 +6,17 @@ import {
   AboutContent,
   Story,
   Picture,
-  Phrase,
+  Paragraph,
   Narrative,
   Skills,
   PLink,
+  TechsIntro,
   Techs,
   Tech,
   TechIcon,
   TechName,
   Vision
-} from "./About.elements";
+} from "./About.components";
 import Me from '../../../assets/me.png'
 
 const About = () => {
@@ -29,22 +30,22 @@ const About = () => {
               <img src={Me} alt="dessin" />
             </Picture>
             <Narrative>
-              <Phrase>
-               &Agrave; mille lieues, à l'époque, de m'imaginer envisager sérieusement une reconversion dans le domaine, c'est à la fin de mes études d'Histoire qu'eût lieu ma première rencontre avec le développement Web. Cherchant un moyen d'améliorer l'affichage d'une page Web, je dévoilai son code Html et Css en ouvrant au hasard les outils de développement du navigateur. Au cours des mois qui suivirent et au fil de mes recherches sur le sujet, la curiosité suscitée par ma découverte se mua en un intérêt certain qui, à son tour, déboucha sur une fascination grandissante, portant au passage un sérieux coup à mon projet professionnel en cours.
-              </Phrase><br />
-              <Phrase>
-                Après un apprentissage en autodidacte plus ou moins laborieux dont je vous passe les détails, je décidai de me jeter à l'eau en entamant un processus de reconversion un peu plus encadré, qui m'amena notamment à effectuer une formation de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>. Cela me permit d'acquérir de solides bases en Javascript ( avec un apprentissage plus poussé du framework React ) et Php, que je validai ensuite en obtenant le titre professionnel.
-              </Phrase><br />
-              <Phrase>
-                Aujourd'hui je continue de grandir en développant mes compétences techniques via mes projets, en particulier sur les technologies appartenant à l'univers Javascript, avec un attrait affiché pour l'écosystème React.
-              </Phrase>
+              <Paragraph>
+               Initialement formé en Histoire, je me suis pris de passion pour le développement informatique, et c'est naturellement que j'ai décidé d'en faire mon métier en effectuant une reconversion dans le domaine.
+              </Paragraph><br />
+              <Paragraph>
+                Après une formation intensive de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>, validée par l'obtention du titre professionnel, j'ai poursuivi ma montée en compétences via des side-projects qui m'ont permis de gagner en autonomie et d'améliorer mes techniques.
+              </Paragraph><br />
+              <Paragraph>
+                Mes compétences actuelles sont basées sur les langages PHP, Javascript, avec une expérience plus poussée de la bibliothèque React et de ses outils complémentaires.
+              </Paragraph>
             </Narrative>
           </Story>
           <Skills>
             <Vision>
-              <Phrase>Avec l'ambition de devenir un développeur totalement accompli à moyen terme, je m'informe et reste ouvert à l'apprentissage de nouvelles technologies pertinentes que je m'emploie à ajouter au fur et à mesure à mon arc de compétences.</Phrase>
-              <Phrase>Ci-dessous un aperçu des langages et outils avec lesquels je travaille :</Phrase>
+              <Paragraph>Totalement ouvert à l'apprentissage de nouveaux langages et outils pertinents, j'effectue une veille technologique permanente qui me permet de mettre régulièrement à jour mes connaissances .</Paragraph>
             </Vision>
+            <TechsIntro>Un aperçu de ma stack technique</TechsIntro>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>
               <Techs>
                 <Tech>

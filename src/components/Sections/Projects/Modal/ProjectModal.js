@@ -14,7 +14,7 @@ import {
     Experience,
     LinksContainer,
     Link
-} from "./Modal.elements";
+} from "./ProjectModal.components";
 
 
 const Modal = ({

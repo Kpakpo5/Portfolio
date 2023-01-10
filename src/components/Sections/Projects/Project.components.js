@@ -52,7 +52,7 @@ export const ProjectsContainer = styled.ul`
 `;
 
 export const ProjectIntro = withReveal(styled.p`
-  //
+  font-size: 1.1.rem;
 `, <Fade left/>);
 
 export const ProjectTemplate = withReveal(styled.li`

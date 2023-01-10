@@ -62,14 +62,23 @@ export const Story = withReveal(styled.div`
 export const Skills = withReveal(styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 40px;
 `, <Fade bottom/>);
 
-export const Phrase = withReveal(styled.p`
-  //
+export const Paragraph = withReveal(styled.p`
+  color: #FCF5E5;
+  text-align: center;
+  font-size: 1.3rem;
 `, <Fade bottom/>);
+
+
+export const TechsIntro = withReveal(styled.p`
+  font-size: 1.1rem;
+  text-align: center;
+`, <Fade left/>);
 
 export const Techs = styled.ul`
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -126,7 +135,7 @@ export const Vision = styled.div`
 
   & > * {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: #bfbfbf;
   }
 

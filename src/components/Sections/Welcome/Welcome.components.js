@@ -58,21 +58,34 @@ export const HomeSection = styled.section`
 export const Greet = styled.div`
   color: white;
   font-size: 33px;
+  font-weight: bold;
   color: white;
   @media screen and (max-width: 480px) {
     font-size: 22px;
   }
 
-  & > .Typewriter > .Typewriter__cursor {
-    display: none;
+  & > * {
+    text-align: center;
+  }
+
+  & > .Typewriter {
+
+    & > .Typewriter__cursor {
+      display: none;
+    }
+    & > .Typewriter__wrapper {
+      text-align: center;
+    }
+
   }
 `;
 
 export const Intro = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 55px;
+  text-align: center;
+  align-items: center;
   @media screen and (max-width: 480px) {
     margin-top: 40px;
   }
@@ -98,31 +111,40 @@ export const Intro = styled.div`
   }
   
   & > p {
-    margin-top: 50px;
-    border-radius: 5px;
-    padding-left: 5px;
+    position: relative;
+    margin-top: 60px;
+    border-radius: 2px;
+    padding: 10px 8px;
+    max-width: 360px;
+    background-color: #FCF5E5;
+    color: black;
+    box-shadow: 0 0 5px 5px #FCF5E5;
     font-size: 1.1rem;
     font-style: italic;
     animation-name: ${fadeUp};
     animation-duration: 1.8s;
     @media screen and (max-width: 480px) {
     margin-top: 30px;
-    border-bottom: 1px solid rgba(255 ,255 ,255, 0.4);
-    border-left: 1px solid rgba(255 ,255 ,255, 0.4);
     }
     
     &:after{
-      content:""; 
-      border-left:10px solid transparent;
-      border-right:10px solid transparent;
-      border-top: 10px solid rgba(255 ,255 ,255, 0.4);
+      content: "";
+      width: 0px;
+      height: 0px;
       position: absolute;
+      border-left: 16px solid #FCF5E5;
+      border-right: 12px solid transparent;
+      border-top: 8px solid #FCF5E5;
+      border-bottom: 20px solid transparent;
+      left: 51%;
+      bottom: -20px;
+      filter: blur(1px)
     }
     
   }
 
   & > span {
-      margin-top : 6px;
+      margin-top : 1rem;
       font-size: 2rem;
       font-style: normal;
       font-weight: normal;

@@ -1,7 +1,7 @@
 import GlobalStyle from './globalStyles';
 import Navbar  from './components/Navbar/Navbar';
 import Sections from './components/Sections/Sections';
-import Home from './components/Sections/Home/Home';
+import Intro from './components/Sections/Welcome/Welcome';
 import About from './components/Sections/About/About';
 import Projects from './components/Sections/Projects/Projects';
 import Contact from './components/Sections/Contact/Contact';
@@ -14,7 +14,7 @@ function App() {
       <GlobalStyle />
       <Navbar />
       <Sections>
-        <Home />
+        <Intro />
         <About />
         <Projects />
         <Contact />

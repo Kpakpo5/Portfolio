@@ -1,6 +1,27 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import withReveal from "react-reveal/withReveal";
 import Fade from 'react-reveal/Fade';
+
+
+const Pulse = keyframes`
+  0% {
+  }
+  2% {
+    transform: scale(0.9);
+  }
+  4% {
+    transform: scale(1.1);
+  }
+  6% {
+    transform: scale(0.9);
+  }
+  8% {
+    transform: scale(1.1);
+  }
+  10% {
+    transform: scale(1);
+  }
+`;
 
 export const ContactSection = styled.section`
   display: flex;
@@ -35,6 +56,9 @@ export const CvContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: auto;
+  animation-name: ${Pulse};
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 
   & > p {
     color: #b3b3b3;
@@ -88,7 +112,7 @@ export const Availability = styled.div`
   & > p {
     padding: 8px;
     text-align: center;
-    color: #bfbfbf;
+    color: #FCF5E5;
   }
 `
 
@@ -111,7 +135,7 @@ export const SocialIcon = styled.li`
 `;
 
 export const SocialLink = styled.a`
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0 30px;
   color: #ffdb7a;
 `;

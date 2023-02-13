@@ -15,7 +15,7 @@ import {
   SocialLink
 } from "./Contact.components";
 
-import CV from '../../../assets/Cv_Kpakpo_Akue.pdf'
+import CV from '../../../assets/Cv_Kpakpo_Akue_dev.pdf'
 
 const Contact = () => {
 
@@ -27,7 +27,7 @@ const Contact = () => {
         <ContentWrapper>
           <SectionContent>
             <Availability>
-              <p>Actuellement, je cherche une opportunité de travail (alternance comprise) afin me consacrer pleinement à ma passion. C'est la dernière étape de ma reconversion, celle qui me permettra de mettre en valeur mes compétences et poursuivre ma progression dans un contexte professionnel .</p>
+              <p>Actuellement, je cherche une opportunité professionnelle (alternance comprise) afin me consacrer pleinement à ma passion. C'est la dernière étape de ma reconversion, celle qui me permettra de mettre en valeur mes compétences et poursuivre ma progression dans un contexte entreprise .</p>
               <p>Pour toute proposition de collaboration, j'ai hâte d'échanger avec vous . </p>
             </Availability>
             <EmailLinkContainer>

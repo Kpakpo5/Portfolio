@@ -52,7 +52,8 @@ export const ProjectsContainer = styled.ul`
 `;
 
 export const ProjectIntro = withReveal(styled.p`
-  font-size: 1.1.rem;
+  font-style: italic;
+  font-size: 1.2rem;
 `, <Fade left/>);
 
 export const ProjectTemplate = withReveal(styled.li`
@@ -143,7 +144,7 @@ export const ProjectMobileLinks = styled.div`
   width: 100%;
   height: 40px;
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `;
@@ -171,7 +172,11 @@ export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
   height: 44vh;
+  max-height: 360px;
   cursor: pointer;
+  border: 1px solid grey;
+  border-radius : 3px;
+  box-shadow: -0.1rem -0.1rem 0.2rem white;
 
   @media screen and (max-width: 768px) {
     height: 44vw;
@@ -179,8 +184,6 @@ export const ImageContainer = styled.div`
 `;
 
 export const ProjectImage = styled.img`
-  border: 1px solid grey;
-  border-radius : 3px;
   width: 100%;
   height: 100%;
   object-fit: cover;

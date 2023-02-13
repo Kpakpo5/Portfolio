@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 8200)
+      setDisplay(true), 7900)
   }, []);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Home = () => {
             <h2>Kpakpo AKUE</h2>
             <h3>Développeur junior</h3>
             <p>Je vous invite à scroller pour en apprendre plus sur moi.<br />
-              J'espère que vous apprécierez la visite. Bonne lecture!<br/>
+              Bonne visite et bonne lecture!<br/>
             </p>
             <span>&#128521;</span>
             { visibility &&

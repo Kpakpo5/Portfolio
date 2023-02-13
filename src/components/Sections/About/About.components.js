@@ -73,7 +73,8 @@ export const Paragraph = withReveal(styled.p`
 
 
 export const TechsIntro = withReveal(styled.p`
-  font-size: 1.1rem;
+  font-style: italic;
+  font-size: 1.2rem;
   text-align: center;
 `, <Fade left/>);
 

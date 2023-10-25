@@ -15,7 +15,7 @@ import {
   SocialLink
 } from "./Contact.components";
 
-import CV from '../../../assets/Cv_Kpakpo_Akue_dev.pdf'
+import CV from '../../../assets/Cv_Kpakpo_Akue_développeur.pdf'
 
 const Contact = () => {
 

@@ -43,7 +43,7 @@ const About = () => {
           </Story>
           <Skills>
             <Vision>
-              <Paragraph>Totalement ouvert à l'apprentissage de nouveaux langages et outils pertinents, j'effectue une veille technologique permanente qui me permet de mettre régulièrement à jour mes connaissances .</Paragraph>
+              <Paragraph>Totalement ouvert à l'apprentissage de nouveaux langages et outils pertinents, j'effectue une veille technologique permanente afin de mettre régulièrement à jour mes connaissances .</Paragraph>
             </Vision>
             <TechsIntro>Un aperçu de ma stack technique</TechsIntro>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>

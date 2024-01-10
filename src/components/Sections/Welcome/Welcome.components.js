@@ -80,6 +80,17 @@ export const Greet = styled.div`
   }
 `;
 
+export const Greeting = styled.div`
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  @media screen and (max-width: 480px) {
+    font-size: 22px;
+  }
+`;
+
 export const Intro = styled.div`
   display: flex;
   flex-direction: column;
@@ -114,12 +125,13 @@ export const Intro = styled.div`
     position: relative;
     margin-top: 60px;
     border-radius: 2px;
-    padding: 10px 8px;
+    padding: 8px 16px;
     max-width: 360px;
     background-color: #FCF5E5;
     color: black;
     box-shadow: 0 0 5px 5px #FCF5E5;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: bold;
     font-style: italic;
     animation-name: ${fadeUp};
     animation-duration: 1.8s;
@@ -127,17 +139,17 @@ export const Intro = styled.div`
     margin-top: 30px;
     }
     
-    &:after{
+    &:before{
       content: "";
       width: 0px;
       height: 0px;
       position: absolute;
       border-left: 16px solid #FCF5E5;
-      border-right: 12px solid transparent;
-      border-top: 8px solid #FCF5E5;
-      border-bottom: 20px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #FCF5E5;
+      border-top: 20px solid transparent;
       left: 51%;
-      bottom: -20px;
+      top: -20px;
       filter: blur(1px)
     }
     

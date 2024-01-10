@@ -37,7 +37,7 @@ const About = () => {
                 Après une formation intensive de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>, validée par l'obtention du titre professionnel, j'ai poursuivi ma montée en compétences via des side-projects qui m'ont permis de gagner en autonomie et d'améliorer mes techniques.
               </Paragraph><br />
               <Paragraph>
-                Mes compétences actuelles sont basées sur les langages PHP, Javascript, avec une expérience plus poussée de la bibliothèque React et de ses outils complémentaires.
+                Mes compétences actuelles sont basées sur Javascript ainsi que les frameworks et bibliothèques en lien avec ce langage, notamment React.Js et ses outils complémentaires.
               </Paragraph>
             </Narrative>
           </Story>

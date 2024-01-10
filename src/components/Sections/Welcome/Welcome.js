@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { HomeSection, Greet, Intro, ScrollInvitation } from './Welcome.components';
+import { HomeSection, Greet, Greeting, Intro, ScrollInvitation } from './Welcome.components';
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 7900)
+      setDisplay(true), 1000)
   }, []);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <>
       <HomeSection id="bienvenue">
-        <Greet>
+        {/* <Greet>
           <Typewriter 
           onInit={(typewriter) => {
             typewriter
@@ -46,14 +46,18 @@ const Home = () => {
             wrapperClassName:"wrapper"
           }}
           />
-        </Greet>
+        </Greet> */}
+        <Greeting>
+          <p>Salut à toi qui ces mots<br/>Merci pour ta présence ici<br/>Bienvenue sur mon site</p>
+        </Greeting>
         { display &&
           <Intro>
             <h1>Moi c'est</h1>
             <h2>Kpakpo AKUE</h2>
             <h3>Développeur junior</h3>
-            <p>Je vous invite à scroller pour en apprendre plus sur moi.<br />
-              Bonne visite et bonne lecture!<br/>
+            <p>J'aime créer des choses<br />
+              J'aime le simple et le beau<br/>
+              Et j'aime apprendre<br/>
             </p>
             <span>&#128521;</span>
             { visibility &&

@@ -32,8 +32,8 @@ const Projects = () => {
             tools="React, Redux, Axios"
             image={flag}
             linkName= "Site Web"
-            context="Premier projet post-formation grâce auquel j'ai pu retravailler les concepts que je connaissais déjà sur React et Redux en toute autonomie. Une version améliorée est en cours de développement..."
-            execution="Plus laborieux que prévu, ce projet a nettement amélioré mes compétences de développeur, m'a permis de tester mon niveau en algo et j'ai pu m'approprier bon nombre de principes fondamentaux en développement Front."
+            context="Premier projet post-formation grâce auquel j'ai pu retravailler les concepts que je connaissais déjà sur React et Redux en toute autonomie. "
+            execution="Plus laborieux que prévu, ce projet a nettement amélioré mes compétences de développeur, m'a permis de tester mes capacités à mener un projet de bout en bout et j'ai pu m'approprier bon nombre de principes fondamentaux en développement Front."
             source="https://flag-memo.netlify.app/"
             repository="https://github.com/Kpakpo5/Flag-Memo"
           />
@@ -42,7 +42,7 @@ const Projects = () => {
             description= "site personnel"
             tools="React, styled-components"
             image={portfolio}
-            context="Je souhaitais augmenter ma visibilité en réalisant un site où je mettrai en valeur mes skills et mon parcours. &Agrave; l'époque, j'envisageais aussi de tester le concept du CSS-in-JS. Faire d'une pierre deux coups, voilà l'idée de départ."
+            context="Je souhaitais augmenter ma visibilité en réalisant un site où je mettrai en valeur mon parcours. &Agrave; l'époque, j'envisageais aussi de tester le concept du CSS-in-JS. Faire d'une pierre deux coups, voilà l'idée de départ."
             execution=" Assez challengeant, aussi  bien côté développement que design, ce projet m'a beaucoup fait progresser en matière d'organisation de travail et a énormément boosté ma créativité."
             repository="https://github.com/Kpakpo5/Portfolio"
           />

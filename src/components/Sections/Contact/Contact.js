@@ -15,7 +15,7 @@ import {
   SocialLink
 } from "./Contact.components";
 
-import CV from '../../../assets/Cv_Kpakpo_Akue_développeur.pdf'
+import CV from '../../../assets/Cv_Kpakpo_Akue_alternance_CP.pdf';
 
 const Contact = () => {
 
@@ -27,8 +27,8 @@ const Contact = () => {
         <ContentWrapper>
           <SectionContent>
             <Availability>
-              <p>Actuellement, je cherche une opportunité professionnelle (alternance comprise) afin me consacrer pleinement à ma passion. C'est la dernière étape de ma reconversion, celle qui me permettra de mettre en valeur mes compétences et poursuivre ma progression dans un contexte entreprise .</p>
-              <p>Pour toute proposition de collaboration, j'ai hâte d'échanger avec vous . </p>
+              <p>Je recherche actuellement une opportunité professionnelle dans le cadre de ma formation en alternance "Chef de projet e-commerce" chez Academy Numérique.</p>
+              <p>Que cela soit pour une proposition de collaboration, ou tout autre motif, n'hésitez pas à me contacter, je serai ravi d'échanger avec vous . </p>
             </Availability>
             <EmailLinkContainer>
               <p>Contactez-moi !</p> 

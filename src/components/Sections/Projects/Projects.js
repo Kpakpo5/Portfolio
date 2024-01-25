@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <>
       <ProjectsSection id="projets">
-        <SectionTitle>Portfolio</SectionTitle>
+        <SectionTitle>Projets</SectionTitle>
         <ProjectIntro>Quelques réalisations notables </ProjectIntro>
         <ProjectsContainer>
           <Project 

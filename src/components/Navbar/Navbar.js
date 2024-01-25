@@ -4,6 +4,8 @@ import { IconContext } from 'react-icons/lib';
 import logo from '../../assets/logo.png';
 import Fade from 'react-reveal/Fade';
 import NavLink from './NavLink';
+import { Cv } from '../Sections/Contact/Contact.components';
+import CV from '../../assets/Cv_Kpakpo_Akue_alternance_CP.pdf';
 import { 
   Nav,
   NavbarContainer,
@@ -14,7 +16,7 @@ import {
   NavItem,
   SocialSection,
   SocialLink
-} from './Navbar.elements';
+} from './Navbar.components';
 
 export const NavContext = createContext();
 
@@ -28,22 +30,28 @@ const navLinks = [
 const Navbar = () => {
   
 
-  const [open, setOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [activeNavLinkId, setActiveNavLinkId] = useState('');
-  const handleClick = () => setOpen(!open);
+
+  const handleClick = () => setIsOpen(!isOpen);
 
   let prevScrollPos = window.scrollY;
-
   const handleScroll = () => {
     let currentScrollPos = window.scrollY;
     if(prevScrollPos < currentScrollPos) {
-      setHidden(true);
+      setIsHidden(true);
     } else {
-      setHidden(false);
+      setIsHidden(false);
     }
     prevScrollPos = currentScrollPos;
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else document.body.style.overflow = "scroll";
+  })
 
   useEffect(() => {
     window.addEventListener("scroll",handleScroll);
@@ -54,18 +62,20 @@ const Navbar = () => {
 
   return (
     <>
-    <IconContext.Provider value={{ color: 'white' }}>
+    <IconContext.Provider value={{ color: 'black' }}>
       <NavContext.Provider value={activeNavLinkId}>
-        <Nav hidden={hidden}>
+        <Nav isHidden={isHidden}>
           <NavbarContainer>
             <NavLogo href='/'>
               <Logo src={logo} alt="logo" />
             </NavLogo>
+            <IconContext.Provider value={{ color: 'white' }}>
             <MenuIcon onClick={handleClick}>
-              {open ? <FaTimes /> : <FaBars />}
+              {isOpen ? <FaTimes /> : <FaBars />}
             </MenuIcon>
+            </IconContext.Provider>
             <Fade left cascade>
-            <NavMenu onClick={handleClick} open={open}>
+            <NavMenu onClick={handleClick} isOpen={isOpen}>
               {navLinks.map(
               ({navLinkId, text, path}) =>
                 <NavItem  key={navLinkId}>
@@ -80,11 +90,14 @@ const Navbar = () => {
             </NavMenu>
             </Fade>
             <SocialSection>
+              <Cv href={CV} download rel="noopener noreferrer" target="_blank">Curriculum Vitae</Cv>
               <SocialLink href="https://www.linkedin.com/in/kpakpo-akue/" target="_blank">
                 <FaLinkedin />
+                LinkedIn
               </SocialLink>
               <SocialLink href="https://github.com/Kpakpo5" target="_blank">
                 <FaGithubSquare />
+                Github
               </SocialLink>
             </SocialSection>
           </NavbarContainer>

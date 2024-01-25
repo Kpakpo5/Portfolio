@@ -29,7 +29,7 @@ export const Nav = styled.nav`
     width : 100%;
     height: 80px;
     justify-content: center;
-    top: ${({hidden}) => (hidden ? '-100px' : 0)};
+    top: ${({isHidden}) => (isHidden ? '-100px' : 0)};
     transition: all 0.8s ease;
     z-index: 999;
     animation-name: ${animateNav};
@@ -105,10 +105,10 @@ export const NavMenu = styled.ul`
   
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     position: absolute;
     top: 80px;
-    left: ${({open}) => (open ? 0 : '-100%')};
+    left: ${({isOpen}) => (isOpen ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
     background: #0e0e0e;
@@ -176,7 +176,7 @@ export const SocialSection = withReveal(styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: 140px;
 
   @media screen and (max-width: 768px) {
    display: none;
@@ -184,12 +184,19 @@ export const SocialSection = withReveal(styled.div`
 `, <Fade left/>);
 
 export const SocialLink = styled.a`
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
   height: 30px;
-  width: 30px;
+  width: auto;
+  padding: 4px 8px;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: white;
   border-radius: 4px;
   transition: transform 0.3s ease, border-top 0.12s ease, border-right 0.12s ease;
-
   
   &:hover {
     transform: scale(1.1) translate(4px,-4px);

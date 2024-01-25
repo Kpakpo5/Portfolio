@@ -1,67 +1,43 @@
 import { useState, useEffect } from 'react';
-import { HomeSection, Greet, Intro, ScrollInvitation } from './Welcome.components';
-import Typewriter from "typewriter-effect";
+import { TiSocialLinkedinCircular, TiSocialGithubCircular } from 'react-icons/ti';
+import { IconContext } from 'react-icons/lib';
+import { HomeSection, Greeting, Intro, LinksContainer, SocialLink, CV} from './Welcome.components';
+import Cv from '../../../assets/Cv_Kpakpo_Akue_alternance_CP.pdf';
 
 const Home = () => {
 
   const [display, setDisplay] = useState(false);
 
-  const [visibility, setVisibility] = useState(true);
-
-  const onScroll = () => {
-    setVisibility(false);
-  }
-
   useEffect(() => {
     setTimeout(() => 
-      setDisplay(true), 7900)
+      setDisplay(true), 3000);
   }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll",onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-    }, []);
 
   return (
     <>
       <HomeSection id="bienvenue">
-        <Greet>
-          <Typewriter 
-          onInit={(typewriter) => {
-            typewriter
-            .typeString('Vous')
-            .pauseFor(400)
-            .typeString(' qui lisez ces mots <br />')
-            .pauseFor(400)
-            .typeString(' Merci pour votre présence ici <br />')
-            .pauseFor(400)
-            .typeString(' Bienvenue sur mon site !')
-            .start();
-          }}
-          options={{
-            delay: 60,
-            deleteSpeed: 30,
-            wrapperClassName:"wrapper"
-          }}
-          />
-        </Greet>
+        <Greeting>
+          <p>Salut à toi qui lis ces mots !<br/>Bienvenue chez moi<br/>Et bonne visite !</p>
+        </Greeting>
         { display &&
           <Intro>
             <h1>Moi c'est</h1>
             <h2>Kpakpo AKUE</h2>
-            <h3>Développeur junior</h3>
-            <p>Je vous invite à scroller pour en apprendre plus sur moi.<br />
-              Bonne visite et bonne lecture!<br/>
-            </p>
-            <span>&#128521;</span>
-            { visibility &&
-              <ScrollInvitation>
-                <p><span>&#128071;</span></p>
-              </ScrollInvitation>
-            }
+            <h3>futur chef de projet digital</h3>
+            <p>Mon expérience dans la programmation informatique s'enrichit actuellement de compétences dans le Webdesign, la rédaction Web et le SEO.</p>
+            <LinksContainer>
+              <IconContext.Provider value={{style: { color: "black", fontSize: "60px", margin: "-6px"}}}>
+                <SocialLink href="https://www.linkedin.com/in/kpakpo-akue/" target="_blank">
+                  <TiSocialLinkedinCircular />
+                </SocialLink>
+                <SocialLink href="https://github.com/Kpakpo5" target="_blank">
+                  <TiSocialGithubCircular />
+                </SocialLink>
+                <CV href={Cv} download rel="noopener noreferrer" target="_blank">CV</CV>
+              </IconContext.Provider>
+            </LinksContainer>
           </Intro>
+          
         }
       </HomeSection>
     </>

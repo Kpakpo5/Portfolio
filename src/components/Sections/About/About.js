@@ -9,7 +9,6 @@ import {
   Paragraph,
   Narrative,
   Skills,
-  PLink,
   TechsIntro,
   Techs,
   Tech,
@@ -31,19 +30,19 @@ const About = () => {
             </Picture>
             <Narrative>
               <Paragraph>
-               Initialement formé en Histoire, je me suis pris de passion pour le développement informatique, et c'est naturellement que j'ai décidé d'en faire mon métier en effectuant une reconversion dans le domaine.
+               Bien parti pour travailler dans la fonction publique après mes études d'Histoire, mon intérêt pour l'univers du digital m'a conduit à effectuer une reconversion dans le domaine.
               </Paragraph><br />
               <Paragraph>
-                Après une formation intensive de développeur Web à <PLink href="https://oclock.io/">O'clock</PLink>, validée par l'obtention du titre professionnel, j'ai poursuivi ma montée en compétences via des side-projects qui m'ont permis de gagner en autonomie et d'améliorer mes techniques.
+                Après une formation de développeur Web et l'obtention du titre professionnel, mes projets personnels m'ont permis de gagner en autonomie et d'améliorer mes techniques.
               </Paragraph><br />
               <Paragraph>
-                Mes compétences actuelles sont basées sur les langages PHP, Javascript, avec une expérience plus poussée de la bibliothèque React et de ses outils complémentaires.
+                Mes principales compétences actuelles sont basées sur Javascript ainsi que les frameworks et bibliothèques en lien avec ce langage, notamment React.Js et ses outils complémentaires.
               </Paragraph>
             </Narrative>
           </Story>
           <Skills>
             <Vision>
-              <Paragraph>Totalement ouvert à l'apprentissage de nouveaux langages et outils pertinents, j'effectue une veille technologique permanente qui me permet de mettre régulièrement à jour mes connaissances .</Paragraph>
+              <Paragraph>D'un naturel curieux, et conscient de l'importance de la formation continue, j'effectue une veille technologique permanente, particulièrement dans le domaine de la conception d'applications Web ainsi que le Webmarketing.</Paragraph>
             </Vision>
             <TechsIntro>Un aperçu de ma stack technique</TechsIntro>
             <IconContext.Provider value={{ style: {color: '#000', fontSize: '2.2rem', backgroundColor: '#fff', fill: 'black', stroke: 'black' }}}>

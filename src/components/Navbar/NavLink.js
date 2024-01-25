@@ -1,5 +1,5 @@
 import {useContext, useState, useEffect} from 'react';
-import { NavBarLink } from "./Navbar.elements";
+import { NavBarLink } from "./Navbar.components";
 import { NavContext } from './Navbar';
 
 const NavLink = ({ navLinkId, text, path, setActiveNavLinkId }) => {

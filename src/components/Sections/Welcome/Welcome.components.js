@@ -1,5 +1,16 @@
 import styled, {keyframes} from "styled-components";
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
 const fadeInLeft = keyframes`
   0% {
     opacity: 0;
@@ -33,16 +44,6 @@ const fadeUp = keyframes`
   }
 `; 
 
-const blink = keyframes`
-  50% {
-    opacity: 0;
-  }
-`;
-
-const pointDown = keyframes`
-  100% { transform: translateY(0)}
-  0%{ transform: translateY(11px)}
-`;
 
 export const HomeSection = styled.section`
   display: flex;
@@ -55,28 +56,18 @@ export const HomeSection = styled.section`
   }
 `;
 
-export const Greet = styled.div`
+
+export const Greeting = styled.div`
   color: white;
   font-size: 33px;
   font-weight: bold;
   color: white;
+  text-align: center;
+  animation-name: ${fadeIn};
+  animation-duration: 1.1s;
+  animation-timing-function: ease-in;
   @media screen and (max-width: 480px) {
     font-size: 22px;
-  }
-
-  & > * {
-    text-align: center;
-  }
-
-  & > .Typewriter {
-
-    & > .Typewriter__cursor {
-      display: none;
-    }
-    & > .Typewriter__wrapper {
-      text-align: center;
-    }
-
   }
 `;
 
@@ -112,32 +103,35 @@ export const Intro = styled.div`
   
   & > p {
     position: relative;
-    margin-top: 60px;
+    margin-top: 80px;
     border-radius: 2px;
-    padding: 10px 8px;
-    max-width: 360px;
+    padding: 8px 16px;
+    max-width: 460px;
     background-color: #FCF5E5;
     color: black;
     box-shadow: 0 0 5px 5px #FCF5E5;
     font-size: 1.1rem;
+    font-weight: bold;
     font-style: italic;
     animation-name: ${fadeUp};
-    animation-duration: 1.8s;
+    animation-duration: 1.5s;
     @media screen and (max-width: 480px) {
     margin-top: 30px;
+    width: 100%;
+    font-size: 0.9rem;
     }
     
-    &:after{
+    &:before{
       content: "";
       width: 0px;
       height: 0px;
       position: absolute;
       border-left: 16px solid #FCF5E5;
-      border-right: 12px solid transparent;
-      border-top: 8px solid #FCF5E5;
-      border-bottom: 20px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #FCF5E5;
+      border-top: 20px solid transparent;
       left: 51%;
-      bottom: -20px;
+      top: -20px;
       filter: blur(1px)
     }
     
@@ -151,29 +145,41 @@ export const Intro = styled.div`
     }
 `;
 
-export const ScrollInvitation = styled.div`
-  position: fixed;
-  background-color: transparent;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  font-weight: bold;
-
-  @media screen and (max-width: 480px) {
-    font-size: 1.5rem;
-  }
-
-  & > p {
-    white-space: nowrap;
-    animation-name: ${blink};
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-
-    & > span {
-    display: inline-block;
-    margin-left: 15px;
-    animation: ${pointDown} 1s alternate infinite;
-    }
+export const LinksContainer = styled.div`
+  width: 100%;
+  display: flex;
+  color: black;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  @media screen and (min-width: 769px) {
+    display: none;
   }
 `;
+
+export const SocialLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+`;
+
+export const CV = styled.a`
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px  #ffdb7a solid;
+  background-color: rgba(255, 219, 122, 0.2);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+`;
+

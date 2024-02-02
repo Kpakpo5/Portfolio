@@ -31,7 +31,7 @@ const Contact = () => {
               <p>Que cela soit pour une proposition de collaboration, ou tout autre motif, n'hésitez pas à me contacter, je serai ravi d'échanger avec vous . </p>
             </Availability>
             <EmailLinkContainer>
-              <p>Contactez-moi !</p> 
+              <p>M'envoyer un e-mail</p> 
               <EmailLink href="mailto:kpakpo.akue5@gmail.com">
                 <MdEmail style={{fontSize: '6rem'}}/>
               </EmailLink>

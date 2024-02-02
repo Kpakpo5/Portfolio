@@ -17,14 +17,14 @@ const Home = () => {
     <>
       <HomeSection id="bienvenue">
         <Greeting>
-          <p>Salut à toi qui lis ces mots !<br/>Bienvenue chez moi<br/>Et bonne visite !</p>
+          <p>Salut &#128075; <br/>Merci pour ta visite<br/>Bienvenue sur mon site</p>
         </Greeting>
         { display &&
           <Intro>
             <h1>Moi c'est</h1>
             <h2>Kpakpo AKUE</h2>
             <h3>futur chef de projet digital</h3>
-            <p>Mon expérience dans la programmation informatique s'enrichit actuellement de compétences dans le Webdesign, la rédaction Web et le SEO.</p>
+            <p>Après m'être formé au développement Web, j'élargis actuellement mes compétences vers le Webdesign et le marketing digital.</p>
             <LinksContainer>
               <IconContext.Provider value={{style: { color: "black", fontSize: "60px", margin: "-6px"}}}>
                 <SocialLink href="https://www.linkedin.com/in/kpakpo-akue/" target="_blank">
